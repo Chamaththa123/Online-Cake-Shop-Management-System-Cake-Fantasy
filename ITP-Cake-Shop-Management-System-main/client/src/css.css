@@ -417,5 +417,10 @@
     float: left;
     width: 50%;
     padding: 10px;
-    height: 1000px; 
+    height: auto; 
+  }
+  .product-column2 {
+    width: 50%;
+    padding: 10px;
+    height: auto; 
   }
