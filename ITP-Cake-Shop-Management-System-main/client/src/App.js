@@ -10,7 +10,7 @@ import AdminRoute from "./components/Routes/AdminRoute";
 import AdminDashboard from "./pages/Admin/AdminDashboard";
 import AboutUs from "./pages/AboutUs";
 import Profile from "./pages/User/Profile";
-import Product from "./pages/Admin/Product";
+import Product from "./components/Product/Product";
 
 function App() {
   return (
