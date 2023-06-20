@@ -1,24 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import About from "./pages/AboutUs";
+import Register from "./pages/Auth/Register";
+import Login from "./pages/Auth/Login";
+import OurCollection from "./components/OurCollection";
+import PrivateRoute from "./components/Routes/Private";
+import ForgotPasssword from "./pages/Auth/ForgotPassword";
+import AdminRoute from "./components/Routes/AdminRoute";
+import AdminDashboard from "./pages/Admin/AdminDashboard";
+import AboutUs from "./pages/AboutUs";
+import Profile from "./pages/User/Profile";
+import Product from "./pages/Admin/Product";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/Register" element={<Register />} />
+        <Route path="/Login" element={<Login/>} />
+        <Route path="/OurCollection" element={<OurCollection/>} />
+        <Route path="/dashboard" element={<PrivateRoute />}>
+          <Route path="user" element={<HomePage />} />
+        </Route>
+        <Route path="/ForgotPassword" element={<ForgotPasssword/>} />
+        <Route path="/dashboard" element={<AdminRoute />}>
+          <Route path="admin" element={<AdminDashboard />} />
+        </Route>
+
+        <Route path="/AboutUs" element={<AboutUs/>} />
+        <Route path="/UserProfile" element={<Profile/>} />
+        <Route path="/Product" element={<Product/>} />
+
+
+
+
+
+
+    
+      </Routes>
+    </>
   );
 }
 
