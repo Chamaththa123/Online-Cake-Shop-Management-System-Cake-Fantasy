@@ -7,7 +7,7 @@ const router = express.Router();
 
 const imgconfig = multer.diskStorage({
     destination:(req,file,callback)=>{
-        callback(null,"../frontend/public/uploads")
+        callback(null,"../client/public/uploads")
     },
     filename:(req,file,callback)=>{
         callback(null,`photo-${Date.now()}.${file.originalname}`)

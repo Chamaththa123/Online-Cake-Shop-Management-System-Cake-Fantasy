@@ -11,6 +11,7 @@ import AdminDashboard from "./pages/Admin/AdminDashboard";
 import AboutUs from "./pages/AboutUs";
 import Profile from "./pages/User/Profile";
 import Product from "./components/Product/Product";
+import OitemDetailsA from "./components/Product/OitemDetails_A";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/AboutUs" element={<AboutUs/>} />
         <Route path="/UserProfile" element={<Profile/>} />
         <Route path="/Product" element={<Product/>} />
+        <Route path='/product/admin/:id' element={<OitemDetailsA/>}></Route>
 
 
 
