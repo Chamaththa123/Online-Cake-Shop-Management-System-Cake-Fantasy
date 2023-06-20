@@ -4,6 +4,9 @@ import { useNavigate, useParams } from "react-router-dom";
 import Sidebar from '../Layout/Sidebar'
 import '../../css.css'
 import { FaStar } from "react-icons/fa";
+import Tab from "react-bootstrap/Tab";
+import Tabs from "react-bootstrap/Tabs";
+
 
 
 const colors = {
@@ -64,8 +67,8 @@ function OitemDetails_A() {
         <br></br>
         <div className="main-card">
         <p className='p-main-card' style={{fontSize:'30px',fontWeight:'500',}}>Product Details of {inputs.item_code}</p>
+        <div className="row">
         <div class="product-column">
-    <h2>Column 1</h2>
     <p><img
                     src={`/uploads/${inputs.image}`}
                     alt="ss"
@@ -73,9 +76,10 @@ function OitemDetails_A() {
                     className="img"
                   /></p>
   </div>
-  <div class="column" >
-<div>
-  <h3>{inputs.item_name}</h3>
+  <div class="product-column2" >
+  <div>
+                    <br></br>
+                    <h3>{inputs.item_name}</h3>
                     <br></br>
                     <p style={{ fontSize: "13px", marginBottom: "5px" }}>
                       <c style={{ fontWeight: "500" }}>
@@ -149,23 +153,32 @@ function OitemDetails_A() {
                     &nbsp;&nbsp;<i class="fas fa-trash-alt"></i> &nbsp;Delete
                     Item&nbsp;&nbsp;
                   </button>
-
-
-
-
-
-  </div>
-        
-        
-        <img
-                    src={`/uploads/${inputs.image}`}
-                    alt="ss"
-                    style={{ width: "380px", height: "360px" }}
-                    className="img"
-                  />
+                
         </div>
         </div>
-        </div>
+        <div>
+                <Tabs
+                  defaultActiveKey="profile"
+                  id="uncontrolled-tab-example"
+                  className="mb-3"
+                  style={{ margin: "20px", marginLeft: "50px" }}
+                >
+                  <Tab eventKey="profile" title="Description">
+                    <p className="description">
+                      {inputs.description1}
+                      <br></br>
+                      <strong>{inputs.description2}</strong>
+                      <br></br>
+                      <p style={{ color: "red" }}>{inputs.description3}</p>
+                    </p>
+                  </Tab>
+                  <Tab
+                    eventKey="home"
+                    title={`Customer Reviews (${inputs.numReviews})`}
+                    style={{ margin: "20px"}}
+                  >dfdf</Tab>
+                </Tabs>
+              </div></div></div></div>
     </div>
   )
 }
