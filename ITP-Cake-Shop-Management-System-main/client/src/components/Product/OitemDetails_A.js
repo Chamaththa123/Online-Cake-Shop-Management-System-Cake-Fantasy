@@ -1,13 +1,11 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import Sidebar from '../Layout/Sidebar'
-import '../../css.css'
+import Sidebar from "../Layout/Sidebar";
+import "../../css.css";
 import { FaStar } from "react-icons/fa";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
-
-
 
 const colors = {
   orange: "#FEB902",
@@ -55,135 +53,145 @@ function OitemDetails_A() {
     axios
       .delete(`http://localhost:8000/oitem/delete/${id}`)
       .then((res) => res.data)
-      .then(() => history("/admin/oitem"), alert("Item Deleted!!!"));
+      .then(() => history("/Product"), alert("Item Deleted!!!"));
   };
   const stars = Array(5).fill(0);
   return (
     <div>
-      
-      <div className='content' >
-      <Sidebar/>
-      <div className='main'>
-        <br></br>
-        <div className="main-card">
-        <p className='p-main-card' style={{fontSize:'30px',fontWeight:'500',}}>Product Details of {inputs.item_code}</p>
-        <div className="row">
-        <div class="product-column">
-    <p><img
+      <div className="content">
+        <Sidebar />
+        <div className="main">
+          <br></br>
+          <div className="main-card">
+            <p
+              className="p-main-card"
+              style={{ fontSize: "30px", fontWeight: "500" }}
+            >
+              Product Details of {inputs.item_code}
+            </p>
+            <div className="row">
+              <div class="product-column">
+                <p>
+                  <img
                     src={`/uploads/${inputs.image}`}
                     alt="ss"
                     style={{ width: "380px", height: "360px" }}
                     className="img"
-                  /></p>
-  </div>
-  <div class="product-column2" >
-  <div>
-                    <br></br>
-                    <h3>{inputs.item_name}</h3>
-                    <br></br>
-                    <p style={{ fontSize: "13px", marginBottom: "5px" }}>
-                      <c style={{ fontWeight: "500" }}>
-                        {inputs.item_code} - {inputs.category}
-                      </c>{" "}
-                      By Cake Factasy
-                    </p>
-                    <div style={styles.stars}>
-                      {stars.map((_, index) => {
-                        return (
-                          <FaStar
-                            size={15}
-                            precision={0.05}
-                            color={
-                              inputs.avgRating?.toFixed(0) > index
-                                ? colors.orange
-                                : colors.grey
-                            }
-                          />
-                        );
-                      })}
-                      <c style={{ marginTop: "-3px", fontSize: "13px" }}>
-                        &nbsp;&nbsp;&nbsp;&nbsp;{inputs.numReviews} Ratings
-                      </c>
-                    </div>
-
-                    <h4
-                      style={{
-                        color: "#B666D2 ",
-                        marginTop: "20px",
-                        marginBottom: "-20px",
-                      }}
-                    >
-                      {" "}
-                      <b>Rs.{inputs.price?.toFixed(2)}</b>
-                    </h4>
-                    <br />
-                    <Button
-                      status={inputs.status}
-                      style={{ width: "10px", float: "left" }}
-                    />
-                  </div>
+                  />
+                </p>
+              </div>
+              <div class="product-column2">
+                <div>
                   <br></br>
+                  <h3>{inputs.item_name}</h3>
+                  <br></br>
+                  <p style={{ fontSize: "13px", marginBottom: "5px" }}>
+                    <c style={{ fontWeight: "500" }}>
+                      {inputs.item_code} - {inputs.category}
+                    </c>{" "}
+                    By Cake Factasy
+                  </p>
+                  <div style={styles.stars}>
+                    {stars.map((_, index) => {
+                      return (
+                        <FaStar
+                          size={15}
+                          precision={0.05}
+                          color={
+                            inputs.avgRating?.toFixed(0) > index
+                              ? colors.orange
+                              : colors.grey
+                          }
+                        />
+                      );
+                    })}
+                    <c style={{ marginTop: "-3px", fontSize: "13px" }}>
+                      &nbsp;&nbsp;&nbsp;&nbsp;{inputs.numReviews} Ratings
+                    </c>
+                  </div>
 
-                  <a href={`/oitem/update/${inputs._id}`}>
-                    {" "}
-                    <button
-                      style={{
-                        borderRadius: "5px",
-                        height: "40px",
-                        color: "white",
-                        backgroundColor: "#FAB200 ",
-                        border: "none",
-                      }}
-                    >
-                      &nbsp;&nbsp;<i class="fas fa-edit"></i> &nbsp;Edit
-                      Details&nbsp;&nbsp;
-                    </button>
-                  </a>
-                  <button
-                    onClick={deleteHandler}
+                  <h4
                     style={{
-                      marginLeft: "50px",
+                      color: "#B666D2 ",
+                      marginTop: "20px",
+                      marginBottom: "-20px",
+                    }}
+                  >
+                    {" "}
+                    <b>Rs.{inputs.price?.toFixed(2)}</b>
+                  </h4>
+                  <br />
+                  <Button
+                    status={inputs.status}
+                    style={{ width: "10px", float: "left" }}
+                  />
+                </div>
+                <br></br>
+
+                <a href={`/product/admin/update/${inputs._id}`}>
+                  {" "}
+                  <button
+                    style={{
                       borderRadius: "5px",
                       height: "40px",
                       color: "white",
-                      backgroundColor: "#FF3737 ",
+                      backgroundColor: "#FAB200 ",
                       border: "none",
                     }}
                   >
-                    &nbsp;&nbsp;<i class="fas fa-trash-alt"></i> &nbsp;Delete
-                    Item&nbsp;&nbsp;
+                    &nbsp;&nbsp;<i class="fas fa-edit"></i> &nbsp;Edit
+                    Details&nbsp;&nbsp;
                   </button>
-                
-        </div>
-        </div>
-        <div>
-                <Tabs
-                  defaultActiveKey="profile"
-                  id="uncontrolled-tab-example"
-                  className="mb-3"
-                  style={{ margin: "20px", marginLeft: "50px" }}
+                </a>
+                <button
+                  onClick={deleteHandler}
+                  style={{
+                    marginLeft: "50px",
+                    borderRadius: "5px",
+                    height: "40px",
+                    color: "white",
+                    backgroundColor: "#FF3737 ",
+                    border: "none",
+                  }}
                 >
-                  <Tab eventKey="profile" title="Description">
-                    <p className="description">
-                      {inputs.description1}
-                      <br></br>
-                      <strong>{inputs.description2}</strong>
-                      <br></br>
-                      <p style={{ color: "red" }}>{inputs.description3}</p>
-                    </p>
-                  </Tab>
-                  <Tab
-                    eventKey="home"
-                    title={`Customer Reviews (${inputs.numReviews})`}
-                    style={{ margin: "20px"}}
-                  >dfdf</Tab>
-                </Tabs>
-              </div></div></div></div>
+                  &nbsp;&nbsp;<i class="fas fa-trash-alt"></i> &nbsp;Delete
+                  Item&nbsp;&nbsp;
+                </button>
+              </div>
+            </div>
+            <div>
+              <Tabs
+                defaultActiveKey="profile"
+                id="uncontrolled-tab-example"
+                className="mb-3"
+                style={{ margin: "20px", marginLeft: "50px" }}
+              >
+                <Tab eventKey="profile" title="Description">
+                  <p className="description">
+                    {inputs.description1}
+                    <br></br>
+                    <strong>{inputs.description2}</strong>
+                    <br></br>
+                    <p style={{ color: "red" }}>{inputs.description3}</p>
+                  </p>
+                </Tab>
+                <Tab
+                  eventKey="home"
+                  title={`Customer Reviews (${inputs.numReviews})`}
+                  style={{ margin: "20px" }}
+                >
+                  dfdf
+                </Tab>
+              </Tabs>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default OitemDetails_A
+export default OitemDetails_A;
 
 const styles = {
   stars: {

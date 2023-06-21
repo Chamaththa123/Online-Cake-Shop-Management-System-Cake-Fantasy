@@ -6,7 +6,6 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 
 function AddProduct() {
-
     const [item_code, setitem_code] = useState("");
     const [item_name, setitem_name] = useState("");
     const [description1, setdescription1] = useState("");
@@ -22,7 +21,7 @@ function AddProduct() {
     const [error, setError] = useState("");
 
     useEffect(() => {
-        if (item_code.startsWith('OI')) {
+        if (item_code.startsWith("OI")) {
             setIsValid(true);
         } else {
             setIsValid(false);
@@ -77,13 +76,13 @@ function AddProduct() {
 
     return (
         <div>
-             
             <div>
-                <div style={{ margin: '20px' }}>
-                   
+                <div style={{ margin: "20px" }}>
                     <p style={{ fontSize: "20px", fontWeight: "500" }}>Add New Product</p>
                     {error && (
-                        <div className="alert alert-danger">Fill All Required Fileds...!</div>
+                        <div className="alert alert-danger">
+                            Fill All Required Fileds...!
+                        </div>
                     )}
                     <br></br>
                     <Form onSubmit={changeOnclick} encType="multipart/form-data">
@@ -101,9 +100,7 @@ function AddProduct() {
                             </Form.Text>
                         </Form.Group>
                         {!isValid && (
-                            <p style={{ color: 'red' }}>
-                                Item Code must start with 'OI'.
-                            </p>
+                            <p style={{ color: "red" }}>Item Code must start with 'OI'.</p>
                         )}
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Item Name :</Form.Label>
@@ -111,7 +108,6 @@ function AddProduct() {
                                 type="text"
                                 name="item_name"
                                 placeholder="Enter Item name"
-
                                 onChange={(e) => setitem_name(e.target.value)}
                             />
                             <Form.Text className="text-muted">
@@ -241,18 +237,17 @@ function AddProduct() {
                                 borderRadius: "6px",
                                 backgroundColor: "#1FC00F",
                                 border: "none",
-                            }} disabled={!isValid}
+                            }}
+                            disabled={!isValid}
                         >
                             <i className="far fa-check-square"></i>&nbsp;Add New Product
                         </button>
-
-
                     </Form>
                     <br></br>
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default AddProduct
+export default AddProduct;
