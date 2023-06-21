@@ -13,6 +13,7 @@ import Profile from "./pages/User/Profile";
 import Product from "./components/Product/Product";
 import OitemDetailsA from "./components/Product/OitemDetails_A";
 import UpdateOitem from "./components/Product/UpdateOitem";
+import AddOrder from "./components/Order/AddOrder";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
         <Route path='/product/admin/:id' element={<OitemDetailsA/>}></Route>
         <Route path='/product/admin/update/:id' element={<UpdateOitem/>}></Route>
 
+        <Route path='/Product/:id/Order' element={<AddOrder/>}></Route>
 
 
 

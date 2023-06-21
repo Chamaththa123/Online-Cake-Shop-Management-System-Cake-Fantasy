@@ -81,7 +81,7 @@ const OurCollection = () => {
                     width="235px"
                     height="200px"
                   />
-                          </td><button >add to cart</button>
+                          </td><a href={`/Product/${oitems._id}/Order`}><button>add to cart</button></a>
                         </tr>
                       </>
                     );

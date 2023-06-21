@@ -7,6 +7,8 @@ import authRoutes from "./routes/authRoute.js";
 import cors from "cors";
 import bodyParser from "body-parser";
 import itemRoutes from "./routes/item.js"
+import orderRoutes from "./routes/order.js"
+
 
 //configure env
 dotenv.config();
@@ -25,7 +27,7 @@ app.use(morgan("dev"));
 
 app.use(itemRoutes);
 app.use("/uploads",express.static("./uploads"));
-//routes
+app.use(orderRoutes);
 app.use("/api/v1/auth", authRoutes);
 
 //rest api

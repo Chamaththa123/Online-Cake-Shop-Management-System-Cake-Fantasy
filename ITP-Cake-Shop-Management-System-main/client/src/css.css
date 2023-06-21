@@ -424,3 +424,49 @@
     padding: 10px;
     height: auto; 
   }
+  .order-column1 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 650px; 
+    background-color: white;
+    margin-top: -10px;
+  }
+  .order-column2 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 650px; 
+    background-color: white;
+    margin-top: -10px;
+  }
+  .order-column1-1 {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    height: auto; 
+    background-color: white;
+  }
+  .order-column1-2 {
+    float: left;
+    width: 70%;
+    padding: 20px;
+    height: auto; 
+    background-color: white;
+  }
+  .order-column3 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 400px; 
+    background-color: white;
+
+  }
+  .order-column4 {
+    float: left;
+    width: 100%;
+    padding: 10px;
+    height: 400px; 
+    background-color: white;
+
+  }
