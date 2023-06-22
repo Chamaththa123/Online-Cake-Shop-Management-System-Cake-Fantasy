@@ -486,5 +486,36 @@ border-radius: 15px;
     height: 250px; 
     background-color: white;
     border-radius: 15px;
+  }
 
+  .user-column1 {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    height: 350px; 
+    background-color: white;
+    margin-top: -10px;
+    padding-top: 50px;
+    padding-left: 30px;
+
+  }
+  .user-column2 {
+    float: left;
+    width: 35%;
+    padding: 10px;
+    height: 350px; 
+    background-color: white;
+    margin-top: -10px;
+    padding-top: 50px;
+    padding-left: 30px;
+  }
+  .user-column3 {
+    float: left;
+    width: 35%;
+    padding: 10px;
+    height: 350px; 
+    background-color: white;
+    margin-top: -10px;
+    padding-top: 50px;
+  
   }

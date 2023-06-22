@@ -42,9 +42,17 @@ const Login = () => {
     
       <Layout>
         <Header/>
-        <div className="form-container ">
+        <center>
+          
+        <div style={{backgroundColor:'white'}}>
+        <hr style={{ marginTop: "-10px" }}></hr>
+          <br></br>
+        <div className="form-container " style={{width:'30%',textAlign:'left'}}>
+          <br></br>
+          <br></br>
+          <br></br>
         <form onSubmit={handleSubmit}>
-          <h4 className="title">LOGIN FORM</h4>
+         <center> <h4 className="title">LOGIN</h4></center>
 
           <div className="mb-3">
             <input
@@ -69,21 +77,23 @@ const Login = () => {
             />
           </div>
           <div className="mb-3">
-            <button
-              type="button"
-              className="btn btn-primary"
-              onClick={() => {
+            
+            <a onClick={() => {
                 navigate("/ForgotPassword");
-              }}
-            >
-              Forgot Password
-            </button>
+              }} href="" style={{textDecoration:'none'}}>Forgot Password ?</a>
           </div>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-primary" style={{width:'100%',textAlign:'center'}}>
             LOGIN
           </button>
         </form>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        
       </div>
+        </div>
+        </center>
       <Footer/>
       </Layout>
   

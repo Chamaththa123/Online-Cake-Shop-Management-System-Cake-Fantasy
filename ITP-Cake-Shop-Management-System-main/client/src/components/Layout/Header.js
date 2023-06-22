@@ -24,9 +24,9 @@ function Header() {
             
             {!auth?.user ? (
                 <>
-                
+                <a href='/Login' style={{color:'white',fontSize:'15px',float:'right',textDecoration:'none',marginLeft:'15px'}}>SignIn</a>
                   <a href='/Register' style={{color:'white',fontSize:'15px',float:'right',textDecoration:'none',marginLeft:'5px'}}>SignUp</a>
-                  <a href='/Login' style={{color:'white',fontSize:'15px',float:'right',textDecoration:'none',marginLeft:'15px'}}>SignIn</a>
+                  
                 </>
               ) : (
                 <>
