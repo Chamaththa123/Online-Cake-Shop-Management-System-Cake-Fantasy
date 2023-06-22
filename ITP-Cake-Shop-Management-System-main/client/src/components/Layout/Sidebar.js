@@ -35,9 +35,9 @@ function Sidebar() {
           </li>
 
           <li>
-            <a href='#d'>
-              <span className='icon'> <i class="fa fa-star checked" style={{marginLeft:'-3px'}}></i></span>
-              <span className='title'>Product Review</span>
+            <a href='/order/admin/allorders'>
+              <span className='icon'> <i class="fas fa-shopping-basket" style={{marginLeft:'-3px'}}></i></span>
+              <span className='title'>Orders</span>
             </a>
           </li>
 

@@ -45,12 +45,6 @@ function AddOrder() {
   // add
   const shippingcost = 300;
 
-  const to = inputs.price * Quantity + shippingcost;
-  // const [user_id, setuser_id] = useState("");
-  // const [total, settotal] = useState("");
-  // const [quantity, setquantity] = useState("");
-  // const [unit_price, setunit_price] = useState("");
-  // const [shipping, setshipping] = useState("");
   const [note, setnote] = useState("");
   const [delivery_name, setdelivery_name] = useState("");
   const [delivery_phone, setdelivery_phone] = useState("");
@@ -61,6 +55,7 @@ function AddOrder() {
   const [exp_month, setexp_month] = useState("");
 
   const [error, setError] = useState("");
+  const history = useNavigate();
 
   const changeOnclick = (e) => {
     e.preventDefault();
@@ -69,9 +64,13 @@ function AddOrder() {
     const user_id = auth?.user?._id;
     const unit_price = inputs.price;
     const shipping = shippingcost;
+    const product_image = inputs.image;
+    const product_name = inputs.item_name;
 
     const newOrder = {
       user_id,
+      product_name,
+      product_image,
       total,
       quantity,
       unit_price,
@@ -87,55 +86,8 @@ function AddOrder() {
     };
     axios
       .post(`http://localhost:8000/order/${id}/add`, newOrder)
-      .then((res) => console.log(res.data))
+      .then((res) => console.log(res.data)).then(() => history("/OurCollection"), alert(" Order is Placed Successfully!!!"))
       .catch((err) => setError(err.response.data.error));
-    // e.preventDefault();
-
-    // const formData = new FormData();
-
-    // formData.append("user_id", user_id);
-    // formData.append("total", total);
-    // formData.append("quantity", quantity);
-    // formData.append("unit_price", unit_price);
-    // formData.append("shipping", shipping);
-    // formData.append("note", note);
-    // formData.append("delivery_name", delivery_name);
-    // formData.append("delivery_phone", delivery_phone);
-    // formData.append("delivery_address", delivery_address);
-    // formData.append("delivery_area", delivery_area);
-    // formData.append("card_no", card_no);
-    // formData.append("exp_year", exp_year);
-    // formData.append("exp_month", exp_month);
-
-    // setuser_id("");
-    // settotal("");
-    // setquantity("");
-    // setunit_price("");
-    // setshipping("");
-    // setnote("");
-    // setdelivery_name("");
-    // setdelivery_phone("");
-    // setdelivery_address("");
-    // setdelivery_area("");
-    // setcard_no("");
-    // setexp_year("");
-    // setexp_month("");
-
-    // axios
-    //     .post(`http://localhost:8000/order/${id}/add`, formData)
-    //     .then((res) =>
-    //         window.alert("Item Add is Succesfully", {
-    //             position: "top-right",
-    //             autoClose: 7000,
-    //             pauseOnHover: true,
-    //             draggable: true,
-    //             progress: undefined,
-    //             theme: "light",
-    //         })
-    //     )
-    //     .catch((err) => {
-    //         setError(err.response.data.error);
-    //     });
   };
 
   return (
