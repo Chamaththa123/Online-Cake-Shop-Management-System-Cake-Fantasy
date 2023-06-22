@@ -428,7 +428,7 @@
     float: left;
     width: 50%;
     padding: 10px;
-    height: 650px; 
+    height: 750px; 
     background-color: white;
     margin-top: -10px;
   }
@@ -436,7 +436,7 @@
     float: left;
     width: 50%;
     padding: 10px;
-    height: 650px; 
+    height: 750px; 
     background-color: white;
     margin-top: -10px;
   }
@@ -468,5 +468,23 @@
     padding: 10px;
     height: 400px; 
     background-color: white;
+
+  }
+
+  .order-column5 {
+    float: left;
+    width: 30%;
+    padding: 20px;
+    height: 250px; 
+    background-color: white;
+border-radius: 15px;
+  }
+  .order-column6 {
+    float: left;
+    width: 35%;
+    padding: 10px;
+    height: 250px; 
+    background-color: white;
+    border-radius: 15px;
 
   }
