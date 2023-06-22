@@ -21,7 +21,7 @@ function Sidebar() {
           </li>
 
           <li>
-            <a href='#d'>
+            <a href='/user/admin/allusers'>
               <span className='icon'><i class='fas fa-users' ></i></span>
               <span className='title'>Customers</span>
             </a>

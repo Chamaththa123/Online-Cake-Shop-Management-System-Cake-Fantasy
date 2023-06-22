@@ -17,6 +17,7 @@ import AddOrder from "./components/Order/AddOrder";
 import Order from "./components/Order/Order";
 import OrderDetailsA from "./components/Order/OrderDetailsA";
 import UpdateOrder from "./components/Order/UpdateOrder";
+import User from "./components/User/User";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="user" element={<HomePage />} />
         </Route>
         <Route path="/ForgotPassword" element={<ForgotPasssword/>} />
+        <Route path="/user/admin/allusers" element={<User/>} />
         <Route path="/dashboard" element={<AdminRoute />}>
           <Route path="admin" element={<AdminDashboard />} />
         </Route>

@@ -41,7 +41,15 @@ const Register = () => {
     
       <Layout>
         <Header/>
-        <div className="form-container ">
+        
+        <center>
+        <div style={{backgroundColor:'white'}}>
+        <hr style={{ marginTop: "-10px" }}></hr>
+          <br></br>
+          <br></br>
+
+        <div className="form-container " style={{width:'30%'}}>
+          
         <form onSubmit={handleSubmit}>
           <h4 className="title">REGISTER FORM</h4>
           <div className="mb-3">
@@ -111,11 +119,19 @@ const Register = () => {
               required
             />
           </div>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-primary" style={{width:'100%'}}>
             REGISTER
           </button>
         </form>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+
       </div>
+      </div>
+        </center>
+        
       <Footer/>
       </Layout>
     

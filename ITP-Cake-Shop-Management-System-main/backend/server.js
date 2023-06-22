@@ -8,6 +8,7 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import itemRoutes from "./routes/item.js"
 import orderRoutes from "./routes/order.js"
+import userRoutes from './routes/user.js'
 
 
 //configure env
@@ -28,6 +29,7 @@ app.use(morgan("dev"));
 app.use(itemRoutes);
 app.use("/uploads",express.static("./uploads"));
 app.use(orderRoutes);
+app.use(userRoutes);
 app.use("/api/v1/auth", authRoutes);
 
 //rest api
