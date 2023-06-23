@@ -18,6 +18,9 @@ import Order from "./components/Order/Order";
 import OrderDetailsA from "./components/Order/OrderDetailsA";
 import UpdateOrder from "./components/Order/UpdateOrder";
 import User from "./components/User/User";
+import Contact from "./components/ContactUs/Contact";
+import AllContact from "./components/ContactUs/AllContact";
+import ContactDetails from "./components/ContactUs/ContactDetails";
 
 function App() {
   return (
@@ -48,6 +51,9 @@ function App() {
         <Route path='/order/admin/:id' element={<OrderDetailsA/>}></Route>
         <Route path='/order/admin/update/:id' element={<UpdateOrder/>}></Route>
 
+        <Route path='/ContactUs' element={<Contact/>}></Route>
+        <Route path='/AllContact' element={<AllContact/>}></Route>
+        <Route path='/contact/admin/:id' element={<ContactDetails/>}></Route>
 
 
 
