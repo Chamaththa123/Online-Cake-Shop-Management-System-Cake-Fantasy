@@ -51,7 +51,7 @@ function User() {
               className="p-main-card"
               style={{ fontSize: "30px", fontWeight: "500" }}
             >
-              All Products
+              All Customers
             </p>
             <hr></hr>
             <div>
@@ -71,7 +71,7 @@ function User() {
                 </button>
               </p>
               <p style={{ fontSize: "15px", float: "left" }}>
-                &nbsp;&nbsp;&nbsp; All Cake Products
+                &nbsp;&nbsp;&nbsp; All Customers
                 <br />
                 <b>
                   <i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{user_Count}</i>

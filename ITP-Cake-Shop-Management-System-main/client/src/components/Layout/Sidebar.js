@@ -72,7 +72,7 @@ function Sidebar() {
           </li>
 
           <li>
-            <a href='#d'>
+            <a href='/AllContact'>
               <span className='icon'><i class='far fa-comment-dots'></i></span>
               <span className='title'>Contact Us</span>
             </a>

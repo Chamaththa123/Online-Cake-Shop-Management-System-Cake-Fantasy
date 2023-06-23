@@ -9,6 +9,7 @@ import bodyParser from "body-parser";
 import itemRoutes from "./routes/item.js"
 import orderRoutes from "./routes/order.js"
 import userRoutes from './routes/user.js'
+import contactRoutes from './routes/contact.js'
 
 
 //configure env
@@ -30,6 +31,7 @@ app.use(itemRoutes);
 app.use("/uploads",express.static("./uploads"));
 app.use(orderRoutes);
 app.use(userRoutes);
+app.use(contactRoutes);
 app.use("/api/v1/auth", authRoutes);
 
 //rest api
