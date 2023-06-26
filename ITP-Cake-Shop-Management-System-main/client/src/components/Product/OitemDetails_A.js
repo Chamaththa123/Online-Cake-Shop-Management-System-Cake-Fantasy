@@ -164,15 +164,16 @@ function OitemDetails_A() {
                 defaultActiveKey="profile"
                 id="uncontrolled-tab-example"
                 className="mb-3"
-                style={{ margin: "20px", marginLeft: "50px" }}
+                style={{ margin: "20px", marginLeft: "20px" }}
               >
-                <Tab eventKey="profile" title="Description">
+                <Tab eventKey="profile" title="Description" style={{ margin: "20px", marginLeft: "20px"}}>
                   <p className="description">
                     {inputs.description1}
-                    <br></br>
+                    <br></br><br></br>
                     <strong>{inputs.description2}</strong>
-                    <br></br>
+                    <br></br><br></br>
                     <p style={{ color: "red" }}>{inputs.description3}</p>
+                    <br></br>
                   </p>
                 </Tab>
                 <Tab

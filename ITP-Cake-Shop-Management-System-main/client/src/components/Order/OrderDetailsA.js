@@ -99,8 +99,10 @@ function OrderDetailsA() {
                         </div>
                         <div className="order-column6">
                             <p>Unit Price : Rs.{inputs.unit_price?.toFixed(2)}</p>
+                            <p>Quantity : {inputs.quantity}</p>
                             <p>Shipping Price : Rs.{inputs.shipping?.toFixed(2)}</p>
                             <p>Total Price : Rs.{inputs.total?.toFixed(2)}</p>
+                            
                             <p>
                                 Payment Status :{" "}
                                 <Button2

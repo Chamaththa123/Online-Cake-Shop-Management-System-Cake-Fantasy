@@ -12,6 +12,7 @@ import AboutUs from "./pages/AboutUs";
 import Profile from "./pages/User/Profile";
 import Product from "./components/Product/Product";
 import OitemDetailsA from "./components/Product/OitemDetails_A";
+import OitemDetailsC from "./components/Product/Oitemdetails_C";
 import UpdateOitem from "./components/Product/UpdateOitem";
 import AddOrder from "./components/Order/AddOrder";
 import Order from "./components/Order/Order";
@@ -44,6 +45,7 @@ function App() {
         <Route path="/UserProfile" element={<Profile/>} />
         <Route path="/Product" element={<Product/>} />
         <Route path='/product/admin/:id' element={<OitemDetailsA/>}></Route>
+        <Route path='/product/:id' element={<OitemDetailsC/>}></Route>
         <Route path='/product/admin/update/:id' element={<UpdateOitem/>}></Route>
 
         <Route path='/Product/:id/Order' element={<AddOrder/>}></Route>

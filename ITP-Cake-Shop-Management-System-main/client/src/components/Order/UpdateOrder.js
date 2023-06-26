@@ -128,7 +128,8 @@ function UpdateOrder() {
                             </p>
                         </div>
                         <br></br>
-                        <p style={{ marginLeft: "30.9%" }}>Customer Note : {inputs.note}</p>
+                        
+                        <p style={{ marginLeft: "30.9%" ,marginTop:'300px'}}>Customer Note : {inputs.note}</p>
                     </div>
                 </div>
             </div>

@@ -65,7 +65,7 @@ router.route("/").get((req,res) => {
 
 router.get('/random', async (req, res) => {
     try {
-        const data = await Oitem.aggregate([{ $sample: { size: 5 } }]);
+        const data = await Oitem.aggregate([{ $sample: { size: 4 } }]);
         res.json(data);
     } catch (error) {
         console.error(error);
@@ -74,9 +74,9 @@ router.get('/random', async (req, res) => {
 });
 
 
-router.route("/C").get((req,res) => {
+router.route("/b'day").get((req,res) => {
 
-    Oitem.find({ category: 'Chocolate & GIFT Pack' }).limit(5).then((oitems) => {
+    Oitem.find({ category: 'Bday Cake' }).limit(5).then((oitems) => {
         res.json(oitems)
 
     }).catch((err) => {
@@ -84,17 +84,7 @@ router.route("/C").get((req,res) => {
     })
 })
 
-router.route("/oitem/Chocolate").get((req,res) => {
-
-    Oitem.find({category:'Chocolate & GIFT Pack'}).then((oitems) => {
-        res.json(oitems)
-
-    }).catch((err) => {
-        console.log(err);
-    })
-})
-
-router.route("/F").get((req,res) => {
+router.route("/Flowers").get((req,res) => {
 
     Oitem.find({ category: 'Flowers' }).limit(5).then((oitems) => {
         res.json(oitems)
@@ -103,40 +93,72 @@ router.route("/F").get((req,res) => {
         console.log(err);
     })
 })
-  
-router.route("/oitem/Flowers").get((req,res) => {
+router.route("/PrintCake").get((req,res) => {
 
-    Oitem.find({category:'Flowers'}).then((oitems) => {
+    Oitem.find({ category: 'Print Cake' }).limit(5).then((oitems) => {
         res.json(oitems)
 
     }).catch((err) => {
         console.log(err);
     })
 })
+router.route("/WeddingCake").get((req,res) => {
 
-router.route("/mug").get((req,res) => {
-
-    Oitem.find({ category: 'Mugs & Cards' }).limit(5).then((oitems) => {
+    Oitem.find({ category: 'Wedding Cake' }).limit(5).then((oitems) => {
         res.json(oitems)
 
     }).catch((err) => {
         console.log(err);
     })
 })
+router.route("/CupCake").get((req,res) => {
 
-router.route("/oitem/Mug").get((req,res) => {
-
-    Oitem.find({category:'Mugs & Cards'}).then((oitems) => {
+    Oitem.find({ category: 'Cup Cake' }).limit(5).then((oitems) => {
         res.json(oitems)
 
     }).catch((err) => {
         console.log(err);
     })
 })
+router.route("/KidsCake").get((req,res) => {
 
-router.route("/Ingredient").get((req,res) => {
+    Oitem.find({ category: 'Kids Cake' }).limit(5).then((oitems) => {
+        res.json(oitems)
 
-    Oitem.find({ category: 'Cake Ingredient' }).limit(5).then((oitems) => {
+    }).catch((err) => {
+        console.log(err);
+    })
+})
+router.route("/IcingCake").get((req,res) => {
+
+    Oitem.find({ category: 'Icing Cake' }).limit(5).then((oitems) => {
+        res.json(oitems)
+
+    }).catch((err) => {
+        console.log(err);
+    })
+})
+router.route("/AnniversaryCake").get((req,res) => {
+
+    Oitem.find({ category: 'Anniversary Cake' }).limit(5).then((oitems) => {
+        res.json(oitems)
+
+    }).catch((err) => {
+        console.log(err);
+    })
+})
+router.route("/CartoonCake").get((req,res) => {
+
+    Oitem.find({ category: 'Cartoon Cake' }).limit(5).then((oitems) => {
+        res.json(oitems)
+
+    }).catch((err) => {
+        console.log(err);
+    })
+})
+router.route("/Chocolate").get((req,res) => {
+
+    Oitem.find({ category: 'Chocolate' }).limit(5).then((oitems) => {
         res.json(oitems)
 
     }).catch((err) => {
