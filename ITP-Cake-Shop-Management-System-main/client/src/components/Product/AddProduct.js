@@ -127,11 +127,20 @@ function AddProduct() {
                                 >
                                     <option>Select Category</option>
                                     <option value={"Flowers"}>Flowers</option>
-                                    <option value={"Chocolate & GIFT Pack"}>
-                                        Chocolate & GIFT Pack
+                                    <option value={"Chocolate"}>
+                                        Chocolate
                                     </option>
-                                    <option value={"Mugs & Cards"}>Mugs & Cards</option>
-                                    <option value={"Cake Ingredient"}>Cake Ingredient</option>
+                                    <option value={"Cartoon Cake"}>Cartoon Cake</option>
+                                    <option value={"Anniversary Cake"}>Anniversary Cake</option>
+                                    <option value={"Icing Cake"}>Icing Cake</option>
+                                    <option value={"Kids Cake"}>Kids Cake</option>
+                                    <option value={"Cup Cake"}>Cup Cake</option>
+                                    <option value={"Wedding Cake"}>Wedding Cake</option>
+                                    <option value={"Flowers"}>Flowers</option>
+                                    <option value={"Bday Cake"}>B'day Cake</option>
+                                    <option value={"Print Cake"}>Print Cake</option>
+
+
                                 </Form.Select>
                                 <Form.Text className="text-muted">
                                     <p>* Required</p>
