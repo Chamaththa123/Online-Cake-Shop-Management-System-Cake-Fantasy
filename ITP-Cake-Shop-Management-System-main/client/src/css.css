@@ -502,7 +502,7 @@ body {
 
 .product-column3 {
   float: left;
-  width: 60%;
+  width: 50%;
   padding: 10px;
   height: 400px;
   background-color: white;
@@ -511,7 +511,7 @@ body {
 }
 .product-column4 {
   float: left;
-  width: 40%;
+  width: 50%;
   padding: 10px;
   height: 400px;
   background-color: white;
@@ -521,7 +521,7 @@ body {
 .product-column6 {
   float: left;
   width: 20%;
-  padding: 10px;
+  padding: 0px;
   height: auto;
   background-color: white;
   margin-top: -10px;
@@ -530,7 +530,7 @@ body {
 .product-column5 {
   float: left;
   width: 80%;
-  padding: 10px;
+  padding: 0px;
   height: auto;
   background-color: white;
   margin-top: -10px;
@@ -549,5 +549,62 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    max-width: 200px; /* Adjust this value to set the maximum width of the <p> tag */
+    max-width: 200px; 
+  }
+  .home-column1 {
+    float: left;
+    width: 20%;
+    padding: 0px;
+    height: 520px;
+    background-color: white;
+    margin-left: 15px;
+    padding-top: 50px;
+    border: #000000;
+    border-color: #000000;
+    border-width: 5px;
+  }
+
+  .home-column2 {
+    float: left;
+    width: 100%;
+    padding: 0px;
+    height: 50px;
+    background-color:#b666d2;
+    margin-top: -10px;
+    color: white;
+    padding: 11px;
+    font-size: 19px;
+  }
+
+  .category{
+ padding-left: 30px;
+ color: #b666d2;
+ text-decoration: none;
+ font-size: 16px;
+  }
+
+  .home-column3 {
+    float: left;
+    width: 50%;
+    padding: 0px;
+    height: 520px;
+    background-color: rgb(151, 46, 46);
+    margin-left: 15px;
+    padding-top: 50px;
+    border: #000000;
+    border-color: #000000;
+    border-width: 5px;
+  }
+
+  .home-column4 {
+    float: left;
+    width: 25%;
+    padding: 0px;
+    height: 520px;
+    background-color: rgb(151, 46, 46);
+    margin-left: 15px;
+    padding-top: 50px;
+    border: #000000;
+    border-color: #000000;
+    border-width: 5px;
   }
