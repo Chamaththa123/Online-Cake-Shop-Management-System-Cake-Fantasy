@@ -1,5 +1,6 @@
 import express from "express";
 import Oitem from "../models/item.js"
+import Review from "../models/review.js"
 import multer from "multer";
 
 const router = express.Router();
@@ -176,15 +177,6 @@ router.route("/Chocolate").get((req,res) => {
     })
 })
 
-router.route("/oitem/Ingredient").get((req,res) => {
-
-    Oitem.find({category:'Cake Ingredient'}).then((oitems) => {
-        res.json(oitems)
-
-    }).catch((err) => {
-        console.log(err);
-    })
-})
 
 router.route("/All_Oitem").get((req,res) => {
 
@@ -236,11 +228,12 @@ router.post('/oitem/:id/review',async(req,res)=>{
     const name=req.body.name;
     const rating= req.body.rating;
     const comment= req.body.comment;
+    const date= req.body.date;
 
     const product1 = await Oitem.findById(product);
 
     const Reviews = new Review({
-        product,name,rating,comment
+        product,name,rating,comment,date
     })
 
     await Reviews.save();

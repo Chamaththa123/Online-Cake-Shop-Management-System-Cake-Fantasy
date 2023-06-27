@@ -614,3 +614,47 @@ body {
   background-color: white;
   margin-left:35px ;
   }
+
+  .column999 {
+    float: left;
+    width: 60%;
+    padding: 0px;
+    height: auto; 
+  }
+  .column1000 {
+    float: left;
+    width: 40%;
+    padding-top: 60px;
+    height: auto; 
+  }
+
+
+  .btn {
+    border: 1px solid rgb(88, 88, 88);
+    background-color: white;
+    color: black;
+  }
+
+  .open-btn{
+    width:150px;
+    height: 50px;
+  }
+  .review_column{
+    float: left;
+    width: 30%;
+    padding: 0px;
+    height: auto; 
+  }
+
+  .review_column2{
+    float: left;
+    width: 60%;
+    padding: 0px;
+    height: auto; 
+  }
+  .review_column3{
+    float: left;
+    width: 10%;
+    padding: 0px;
+    height: auto; 
+  }
