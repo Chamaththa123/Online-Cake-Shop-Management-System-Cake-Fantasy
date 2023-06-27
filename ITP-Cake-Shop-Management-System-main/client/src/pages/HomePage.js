@@ -3,12 +3,14 @@ import Layout from '../components/Layout/Layout'
 import { useAuth } from '../context/auth'
 import Header from '../components/Layout/Header'
 import Footer from '../components/Layout/Footer'
+import HomeRandom from '../components/Product/HomeRandom'
 
 function HomePage() {
   const [auth,setAuth]=useAuth();
   return (
     <Layout title={"CakeFantasy - HomePage"}>
       <Header/>
+      <hr style={{ marginTop: "-10px" }}></hr>
         <div className='home-column1'>
           <div className='home-column2'>
           <i class='fas fa-arrows-alt'></i> ALL CATEGORIES
@@ -32,6 +34,9 @@ function HomePage() {
         </div>
         <div className='home-column4'>
 
+        </div>
+        <div style={{marginTop:'550px'}}>
+          <HomeRandom/>
         </div>
       <Footer/>
     </Layout>

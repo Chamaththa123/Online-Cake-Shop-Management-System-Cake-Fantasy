@@ -73,6 +73,16 @@ router.get('/random', async (req, res) => {
     }
 });
 
+router.get('/HomeRandom', async (req, res) => {
+    try {
+        const data = await Oitem.aggregate([{ $sample: { size: 40 } }]);
+        res.json(data);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Server Error' });
+    }
+});
+
 
 router.route("/b'day").get((req,res) => {
 

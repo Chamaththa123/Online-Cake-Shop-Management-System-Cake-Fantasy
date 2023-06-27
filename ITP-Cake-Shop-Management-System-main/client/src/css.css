@@ -557,7 +557,7 @@ body {
     padding: 0px;
     height: 520px;
     background-color: white;
-    margin-left: 15px;
+ 
     padding-top: 50px;
     border: #000000;
     border-color: #000000;
@@ -574,6 +574,7 @@ body {
     color: white;
     padding: 11px;
     font-size: 19px;
+    margin-left: 15px;
   }
 
   .category{
@@ -589,7 +590,6 @@ body {
     padding: 0px;
     height: 520px;
     background-color: rgb(151, 46, 46);
-    margin-left: 15px;
     padding-top: 50px;
     border: #000000;
     border-color: #000000;
@@ -598,13 +598,19 @@ body {
 
   .home-column4 {
     float: left;
-    width: 25%;
+    width: 30%;
     padding: 0px;
     height: 520px;
     background-color: rgb(151, 46, 46);
-    margin-left: 15px;
     padding-top: 50px;
     border: #000000;
     border-color: #000000;
     border-width: 5px;
+  }
+  .HomeCollection{
+    float: left;
+  width: 95%;
+  height: auto;
+  background-color: white;
+  margin-left:35px ;
   }

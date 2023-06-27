@@ -10,7 +10,7 @@ function AboutUs() {
     <Layout title={"CakeFantasy - About Us"}>
       <div style={{backgroundColor:'white'}}>
       <Header/>
-
+      <hr style={{ marginTop: "-10px" }}></hr>
         <div style={{marginLeft:'50px',marginRight:'600px',marginTop:'50px'}}>
             <p>Cake Fantasy Shop is the creation of Chef ABCDEF. 
                 Having been a top pastry chef for several years in the hotel industry, his passion 
