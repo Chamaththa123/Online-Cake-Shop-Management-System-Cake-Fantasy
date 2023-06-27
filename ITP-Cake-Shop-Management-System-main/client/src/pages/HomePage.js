@@ -4,6 +4,9 @@ import { useAuth } from '../context/auth'
 import Header from '../components/Layout/Header'
 import Footer from '../components/Layout/Footer'
 import HomeRandom from '../components/Product/HomeRandom'
+import add2 from '../images/ADD2.png'
+import add1 from '../images/ADD4.png'
+import add5 from '../images/ADD5.png'
 
 function HomePage() {
   const [auth,setAuth]=useAuth();
@@ -30,10 +33,19 @@ function HomePage() {
           <p className='category'><i class='fas fa-bullseye' style={{fontSize:'20px'}}></i><a href='s' style={{textDecoration:'none',color:'#772196'}}>&nbsp;&nbsp;&nbsp; Chocolate</a></p>
         </div>
         <div className='home-column3'>
-
+        <div class="container">
+        <center><img src={add1} alt='add2' style={{width:'95%'}}/></center>
+  <div class="text-block">
+    <button className='text-block-btn'>Order Now</button>
+  </div>
+</div>
+        
         </div>
         <div className='home-column4'>
-
+<div>
+<center><img src={add2} alt='add2' style={{width:'95%',height:'220px'}}/></center>
+<center><img src={add5} alt='add2' style={{width:'95%',height:'220px',marginTop:'20px'}}/></center>
+</div>
         </div>
         <div style={{marginTop:'550px'}}>
           <HomeRandom/>
