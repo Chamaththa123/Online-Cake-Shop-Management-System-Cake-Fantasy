@@ -8,6 +8,7 @@ import Tabs from "react-bootstrap/Tabs";
 import Header from "../Layout/Header";
 import Footer from "../Layout/Footer";
 import Random from "./Random";
+import Review from "../Review/Review";
 
 const colors = {
   orange: "#FEB902",
@@ -126,7 +127,7 @@ function Oitemdetails_C() {
               title={`Customer Reviews (${inputs.numReviews})`}
               style={{ margin: "20px" }}
             >
-              dfdf
+              <Review/>
             </Tab>
           </Tabs>
           <br></br>
