@@ -243,7 +243,7 @@ const OurCollection = () => {
                     marginLeft: "15px",
                   }}
                   name="half-rating-read"
-                  defaultValue={oitems.avgRating}
+                  defaultValue={flower.avgRating}
                   precision={0.5}
                   readOnly
                 />
