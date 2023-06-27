@@ -29,7 +29,7 @@ function Random() {
       {oitems?.map((oitems, id) => {
         return (
           <>
-            <Card style={{ width: "12rem" }}>
+            <Card style={{ width: "13rem" }}>
               <Card.Img
                 variant="top"
                 src={`/uploads/${oitems.image}`}
