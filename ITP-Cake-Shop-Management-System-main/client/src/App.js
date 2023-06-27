@@ -23,6 +23,7 @@ import Contact from "./components/ContactUs/Contact";
 import AllContact from "./components/ContactUs/AllContact";
 import ContactDetails from "./components/ContactUs/ContactDetails";
 import DeliveryArea from "./components/DeliveryArea";
+import FAQ from "./components/FAQ";
 
 function App() {
   return (
@@ -60,6 +61,7 @@ function App() {
 
 
         <Route path='/DeliveryArea' element={<DeliveryArea/>}></Route>
+        <Route path='/FAQ' element={<FAQ/>}></Route>
 
 
 
