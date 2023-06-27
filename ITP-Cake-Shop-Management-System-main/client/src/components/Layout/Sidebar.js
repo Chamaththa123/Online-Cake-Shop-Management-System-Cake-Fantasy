@@ -14,7 +14,7 @@ function Sidebar() {
           </li>
 
           <li>
-            <a href='#d'>
+            <a href='/dashboard/admin'>
               <span className='icon'><i class='fa fa-dashboard' style={{marginLeft:'-3px'}}></i></span>
               <span className='title'>Dashboard</span>
             </a>
