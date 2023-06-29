@@ -184,7 +184,8 @@ const OurCollection = () => {
       <Header />
       <hr style={{ marginTop: "-10px" }}></hr>
       <div className="collection">
-        <h3>Birthday Cakes</h3>
+        <h3 className="collection-heading">Birthday Cakes <a href="/Bcake" className="view">View More</a></h3>
+       
         {oitems?.map((oitems, id) => {
           return (
             <>
@@ -224,7 +225,8 @@ const OurCollection = () => {
       </div>
 
       <div className="collection">
-        <h3>Flowers</h3>
+        <h3 className="collection-heading">Flowers <a href="/Flowers" className="view">View More</a></h3> 
+        
         {flower?.map((flower, id) => {
           return (
             <>
@@ -266,7 +268,7 @@ const OurCollection = () => {
       </div>
 
       <div className="collection">
-        <h3>Cartoon Cakes</h3>
+        <h3 className="collection-heading">Cartoon Cakes<a href="/Cartoon" className="view">View More</a></h3>
         {cartoon?.map((cartoon, id) => {
           return (
             <>
@@ -308,7 +310,7 @@ const OurCollection = () => {
       </div>
 
       <div className="collection">
-        <h3>Wedding Cakes</h3>
+        <h3 className="collection-heading">Wedding Cakes<a href="/Wedding" className="view">View More</a></h3>
         {wedding?.map((wedding, id) => {
           return (
             <>
@@ -350,7 +352,7 @@ const OurCollection = () => {
       </div>
 
       <div className="collection">
-        <h3>Print Cakes</h3>
+        <h3 className="collection-heading">Print Cakes<a href="/Print" className="view">View More</a></h3>
         {print?.map((print, id) => {
           return (
             <>
@@ -392,7 +394,7 @@ const OurCollection = () => {
       </div>
 
       <div className="collection">
-        <h3>Cup Cakes</h3>
+        <h3 className="collection-heading">Cup Cakes <a href="/Cup" className="view">View More</a></h3>
         {cup?.map((cup, id) => {
           return (
             <>
@@ -434,7 +436,7 @@ const OurCollection = () => {
       </div>
 
       <div className="collection">
-        <h3>Kids Cakes</h3>
+        <h3 className="collection-heading">Kids Cakes <a href="/Kids" className="view">View More</a></h3>
         {kids?.map((kids, id) => {
           return (
             <>
@@ -476,7 +478,7 @@ const OurCollection = () => {
       </div>
 
       <div className="collection">
-        <h3>Icing Cakes</h3>
+        <h3 className="collection-heading">Icing Cakes <a href="/Icing" className="view">View More</a></h3>
         {icing?.map((icing, id) => {
           return (
             <>
@@ -518,7 +520,7 @@ const OurCollection = () => {
       </div>
 
       <div className="collection">
-        <h3>Anniversary Cakes</h3>
+        <h3 className="collection-heading">Anniversary Cakes <a href="/Anniversary" className="view">View More</a></h3>
         {Anniversary?.map((Anniversary, id) => {
           return (
             <>
@@ -560,7 +562,7 @@ const OurCollection = () => {
       </div>
 
       <div className="collection">
-        <h3>Chocolate</h3>
+        <h3 className="collection-heading">Chocolate <a href="/Chocolate" className="view">View More</a></h3>
         {Chocolate?.map((Chocolate, id) => {
           return (
             <>

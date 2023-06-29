@@ -24,6 +24,17 @@ import AllContact from "./components/ContactUs/AllContact";
 import ContactDetails from "./components/ContactUs/ContactDetails";
 import DeliveryArea from "./components/DeliveryArea";
 import FAQ from "./components/FAQ";
+import Cartoon from "./components/Product/Cartoon";
+import Anniversary from "./components/Product/Anniversary";
+import Bcake from "./components/Product/Bcake";
+import Chocolate from "./components/Product/Chocolate";
+import Cup from "./components/Product/Cup";
+import Flowers from "./components/Product/Flowers";
+import Icing from "./components/Product/Icing";
+import Kids from "./components/Product/Kids";
+import Print from "./components/Product/Print";
+import Wedding from "./components/Product/Wedding";
+
 
 function App() {
   return (
@@ -63,6 +74,16 @@ function App() {
         <Route path='/DeliveryArea' element={<DeliveryArea/>}></Route>
         <Route path='/FAQ' element={<FAQ/>}></Route>
 
+        <Route path='/Cartoon' element={<Cartoon/>}></Route>
+        <Route path='/Anniversary' element={<Anniversary/>}></Route>
+        <Route path='/Bcake' element={<Bcake/>}></Route>
+        <Route path='/Chocolate' element={<Chocolate/>}></Route>
+        <Route path='/Cup' element={<Cup/>}></Route>
+        <Route path='/Flowers' element={<Flowers/>}></Route>
+        <Route path='/Icing' element={<Icing/>}></Route>
+        <Route path='/Kids' element={<Kids/>}></Route>
+        <Route path='/Print' element={<Print/>}></Route>
+        <Route path='/Wedding' element={<Wedding/>}></Route>
 
 
 
