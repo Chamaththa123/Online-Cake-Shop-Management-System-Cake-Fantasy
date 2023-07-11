@@ -8,6 +8,7 @@ import Tabs from "react-bootstrap/Tabs";
 import { Table } from "react-bootstrap";
 import { MDBInput } from "mdb-react-ui-kit";
 import Rating from "@mui/material/Rating";
+import OitemReport from "./OitemReport";
 
 function Product() {
   const [oitems, setoitems] = useState([]);
@@ -330,7 +331,7 @@ function Product() {
                   <AddProduct />
                 </Tab>
                 <Tab eventKey="profile1" title="Product Report">
-                  report
+                  <OitemReport/>
                 </Tab>
               </Tabs>
             </div>
