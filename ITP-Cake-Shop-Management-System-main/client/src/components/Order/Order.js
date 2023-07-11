@@ -6,6 +6,7 @@ import Sidebar from "../Layout/Sidebar";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import { Table } from "react-bootstrap";
+import OrderReport from "./OrderReport";
 
 function Order() {
   const [order, setorder] = useState([]);
@@ -288,7 +289,7 @@ function Order() {
                   <br></br>
                 </Tab>
                 <Tab eventKey="profile" title="Order Report">
-                  report
+                  <OrderReport/>
                 </Tab>
               </Tabs>
             </div>
