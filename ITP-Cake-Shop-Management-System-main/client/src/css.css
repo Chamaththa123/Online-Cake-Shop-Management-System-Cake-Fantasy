@@ -687,3 +687,20 @@ body {
 .collection-heading {
   color: #910ac1;
 }
+
+.o_c_header{
+  font-size: 18px;
+  margin: 30px;
+  font-weight: 500;
+  color: #B666D2;
+}
+.o_c{
+  margin-left: 30px;
+  font-size: 14px;
+}
+
+.reportheader {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: -20px;
+}

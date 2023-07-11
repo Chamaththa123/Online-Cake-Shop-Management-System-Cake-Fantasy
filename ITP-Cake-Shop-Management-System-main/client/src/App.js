@@ -34,6 +34,7 @@ import Icing from "./components/Product/Icing";
 import Kids from "./components/Product/Kids";
 import Print from "./components/Product/Print";
 import Wedding from "./components/Product/Wedding";
+import OitemReport from "./components/Product/OitemReport";
 
 
 function App() {
@@ -84,6 +85,7 @@ function App() {
         <Route path='/Kids' element={<Kids/>}></Route>
         <Route path='/Print' element={<Print/>}></Route>
         <Route path='/Wedding' element={<Wedding/>}></Route>
+        <Route path='/Product_Report' element={<OitemReport/>}></Route>
 
 
 
