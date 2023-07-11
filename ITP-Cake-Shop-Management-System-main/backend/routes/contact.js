@@ -51,6 +51,22 @@ router.route("/ContactCount").get((req,res) => {
     })
 })
 
+router.route("/ReadContactCount").get((req,res) => {
+    Contact.find({status:'Read'}).count().then((contact) => {
+        res.json(contact)
+    }).catch((err) => {
+        console.log(err);
+    })
+})
+
+router.route("/UnreadContactCount").get((req,res) => {
+    Contact.find({status:'Unread'}).count().then((contact) => {
+        res.json(contact)
+    }).catch((err) => {
+        console.log(err);
+    })
+})
+
 router.get('/Contact/:id',(req,res)=>{
     let contactId = req.params.id;
 
