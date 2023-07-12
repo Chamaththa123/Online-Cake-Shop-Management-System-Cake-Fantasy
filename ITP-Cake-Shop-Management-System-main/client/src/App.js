@@ -35,6 +35,7 @@ import Kids from "./components/Product/Kids";
 import Print from "./components/Product/Print";
 import Wedding from "./components/Product/Wedding";
 import OitemReport from "./components/Product/OitemReport";
+import Employee from "./components/Employee/Employee";
 
 
 function App() {
@@ -88,6 +89,7 @@ function App() {
         <Route path='/Product_Report' element={<OitemReport/>}></Route>
 
 
+        <Route path='/Employee' element={<Employee/>}></Route>
 
     
       </Routes>
