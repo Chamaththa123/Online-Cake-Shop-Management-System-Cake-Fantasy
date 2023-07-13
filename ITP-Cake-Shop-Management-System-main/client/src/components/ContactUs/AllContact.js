@@ -43,8 +43,8 @@ function AllContact() {
     return (
       <p
         style={{
-          color: status === "Unread" ? "#FC8900" : "green",
-          backgroundColor: status === "Unread" ? "#FCC98C " : "#8EFF94",
+          color: status === "Unread" ? "red" : "green",
+          backgroundColor: status === "Unread" ? "#FFBEBE " : "#8EFF94",
           width: "100px",
           borderRadius: "16px",
           height: "22px",
@@ -57,6 +57,36 @@ function AllContact() {
       </p>
     );
   }
+
+  const [R_contact_Count, setRcontact_Count] = useState([]);
+  useEffect(() => {
+    getRcontact_Count();
+  }, []);
+  const getRcontact_Count = () => {
+    axios
+      .get("http://localhost:8000/ReadContactCount")
+      .then((res) => {
+        setRcontact_Count(res.data);
+      })
+      .catch((err) => {
+        alert(err.message);
+      });
+  };
+
+  const [UR_contact_Count, setURcontact_Count] = useState([]);
+  useEffect(() => {
+    getURcontact_Count();
+  }, []);
+  const getURcontact_Count = () => {
+    axios
+      .get("http://localhost:8000/UnreadContactCount")
+      .then((res) => {
+        setURcontact_Count(res.data);
+      })
+      .catch((err) => {
+        alert(err.message);
+      });
+  };
   return (
     <div>
       <div className="content">
@@ -115,7 +145,7 @@ function AllContact() {
                 &nbsp;&nbsp;&nbsp;Unread Messages
                 <br />
                 <b>
-                  <i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{1}</i>
+                  <i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{UR_contact_Count}</i>
                 </b>
               </p>
 
@@ -138,7 +168,7 @@ function AllContact() {
                 &nbsp;&nbsp;&nbsp;Read Messages
                 <br />
                 <b>
-                  <i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{1}</i>
+                  <i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{R_contact_Count}</i>
                 </b>
               </p>
 
