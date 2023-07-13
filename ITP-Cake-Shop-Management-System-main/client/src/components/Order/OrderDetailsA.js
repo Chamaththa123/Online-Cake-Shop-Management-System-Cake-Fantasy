@@ -91,17 +91,17 @@ function OrderDetailsA() {
                             {inputs.image}
                         </div>
                         <div className="order-column6">
-                            <p>Product Name : {inputs.product_name}</p>
-                            <p>Delivery Name : {inputs.delivery_name}</p>
-                            <p>Delivery Phone : {inputs.delivery_phone}</p>
-                            <p>Delivery Address : {inputs.delivery_address}</p>
-                            <p>Delivery Area : {inputs.delivery_area}</p>
+                            <p><i class='fas fa-angle-double-right'></i> Product Name : {inputs.product_name}</p>
+                            <p><i class='fas fa-angle-double-right'></i> Delivery Name : {inputs.delivery_name}</p>
+                            <p><i class='fas fa-angle-double-right'></i> Delivery Phone : {inputs.delivery_phone}</p>
+                            <p><i class='fas fa-angle-double-right'></i> Delivery Address : {inputs.delivery_address}</p>
+                            <p><i class='fas fa-angle-double-right'></i> Delivery Area : {inputs.delivery_area}</p>
                         </div>
                         <div className="order-column6">
-                            <p>Unit Price : Rs.{inputs.unit_price?.toFixed(2)}</p>
-                            <p>Quantity : {inputs.quantity}</p>
-                            <p>Shipping Price : Rs.{inputs.shipping?.toFixed(2)}</p>
-                            <p>Total Price : Rs.{inputs.total?.toFixed(2)}</p>
+                            <p><i class='fas fa-angle-double-right'></i> Unit Price : Rs.{inputs.unit_price?.toFixed(2)}</p>
+                            <p><i class='fas fa-angle-double-right'></i> Quantity : {inputs.quantity}</p>
+                            <p><i class='fas fa-angle-double-right'></i> Shipping Price : Rs.{inputs.shipping?.toFixed(2)}</p>
+                            <p><i class='fas fa-angle-double-right'></i> Total Price : Rs.{inputs.total?.toFixed(2)}</p>
                             
                             <p>
                                 Payment Status :{" "}
@@ -119,7 +119,7 @@ function OrderDetailsA() {
                             </p>
                         </div>
                         <br></br>
-                        <p style={{ marginLeft: "30.9%" }}>Customer Note : {inputs.note}</p>
+                        <p style={{ marginLeft: "30.9%" }}><i class='fas fa-angle-double-right'></i> Customer Note : {inputs.note}</p>
 
                         <button
                             type="button"

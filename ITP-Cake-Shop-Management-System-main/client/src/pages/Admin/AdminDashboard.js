@@ -143,27 +143,7 @@ const AdminDashboard = () => {
       });
   };
 
-  const data = React.useMemo(
-    () => [
-      {
-        label: 'Series 1',
-        data: [[0, 1], [1, 2], [2, 4], [3, 2], [4, 7]]
-      },
-      {
-        label: 'Series 2',
-        data: [[0, 3], [1, 1], [2, 5], [3, 6], [4, 4]]
-      }
-    ],
-    []
-  )
- 
-  const axes = React.useMemo(
-    () => [
-      { primary: true, type: 'linear', position: 'bottom' },
-      { type: 'linear', position: 'left' }
-    ],
-    []
-  )
+
 
   return (
     <Layout>
@@ -175,7 +155,7 @@ const AdminDashboard = () => {
           <div className="main-card">
           <Card style={{ width: '16rem' ,float:'left'}}>
       <Card.Body>
-        <Card.Title>Product</Card.Title>
+        <Card.Title>Products</Card.Title>
         <p>
             <i
               class="fas fa-circle"
@@ -290,14 +270,7 @@ const AdminDashboard = () => {
     </Card>
  
             </div>
-            <div
-      style={{
-        width: '400px',
-        height: '300px'
-      }}
-    >
-      <Chart data={data} axes={axes} />
-    </div><br></br>
+            <br></br>
             </div>
             </div>
       

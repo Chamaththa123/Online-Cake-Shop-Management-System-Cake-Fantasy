@@ -93,6 +93,7 @@ function UpdateEmp() {
                                                 </Col>
                                             </Row>
                                             <Row className="mb-1">
+                                                
                                                 <Col>
                                                     <Form.Group
                                                         className="mb-3"
@@ -120,7 +121,7 @@ function UpdateEmp() {
                                                         </Form.Select>
                                                     </Form.Group>
                                                     <Button
-                                                        variant="primary"
+                                                        variant="success"
                                                         type="submit"
                                                         style={{ width: "100%" }}
                                                     >
