@@ -106,7 +106,8 @@ function Employee() {
                     <th scope="col">Employee Name </th>
                     <th scope="col">Employee Email</th>
                     <th scope="col">Phone Number</th>
-                    <th scope="col">Address</th>
+                    <th scope="col">System Access</th>
+                    <th scope="col"></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -132,7 +133,15 @@ function Employee() {
                           </td>
 
                           <td style={{ borderStyle: "dotted" }}>
-                            {user.address}
+                            {user.role}
+                          </td>
+                          <td style={{ borderStyle: "dotted" }}>
+                          <a
+                                  href={`/Emp/${user._id}`}
+                                  style={{ textDecoration: "none" }}
+                                >
+                                  See More
+                                </a>
                           </td>
                         </tr>
                       </>
