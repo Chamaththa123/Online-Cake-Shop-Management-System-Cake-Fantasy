@@ -4,7 +4,7 @@ import "../../css.css";
 
 function Sidebar() {
   return (
-    <div style={{ backgroundColor: "#e0e0e0" }}>
+    <div style={{ backgroundColor: "black" }}>
       <div>
         <div className="navigation">
           <ul>
@@ -120,7 +120,7 @@ function Sidebar() {
               marginTop: "16px",
               fontSize: "30px",
               fontWeight: "600",
-              color: "#880bb6",
+              color: "#ffffff",
               float: "left",
             }}
           >

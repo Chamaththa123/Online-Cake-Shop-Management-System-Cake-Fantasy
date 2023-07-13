@@ -25,7 +25,7 @@ router.route("/UserCount").get((req, res) => {
 });
 
 router.route("/employee").get((req, res) => {
-    User.find({ role: 1 })
+    User.find({ type: 1 })
         .then((user) => {
             res.json(user);
         })
@@ -35,7 +35,7 @@ router.route("/employee").get((req, res) => {
 });
 
 router.route("/empCount").get((req, res) => {
-    User.find({ role: 1 })
+    User.find({ type: 1 })
         .count()
         .then((user) => {
             res.json(user);
@@ -45,37 +45,35 @@ router.route("/empCount").get((req, res) => {
         });
 });
 
-router.post("/AddEmp", async (req, res) => {
-    const name = req.body.name;
-    const email = req.body.email;
-    const password = req.body.password;
-    const phone = req.body.phone;
-    const address = req.body.address;
-    const answer = req.body.answer;
-    const role = req.body.role;
-    const type = req.body.type;
+router.get('/Emp/:id',(req,res)=>{
+    let empId = req.params.id;
 
-    const newUser = new User({
-        name,
-        email,
-        password,
-        phone,
-        address,
-        answer,
-        role,
-        type,
-    });
-
-    newUser.save((err) => {
-        if (err) {
-            return res.status(400).json({
-                error: err.message,
-            });
+    User.findById(empId,(err,order) =>{
+        if(err){
+            return res.status(400).json({success:false,err});
         }
         return res.status(200).json({
-            success: "Employee added successfully",
+            success:true,
+            order
         });
     });
+});
+
+router.put('/Emp/update/:id',(req,res)=>{
+    User.findByIdAndUpdate(
+        req.params.id,
+        {
+            $set:req.body
+        },
+        (err,item)=>{
+            if(err){
+                return res.status(400).json({error:err});
+            }
+            return res.status(200).json({
+                success:"updated successfully"
+            });
+        }
+    );
 });
 
 export default router;

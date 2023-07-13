@@ -36,6 +36,7 @@ import Print from "./components/Product/Print";
 import Wedding from "./components/Product/Wedding";
 import OitemReport from "./components/Product/OitemReport";
 import Employee from "./components/Employee/Employee";
+import UpdateEmp from "./components/Employee/UpdateEmp";
 
 
 function App() {
@@ -90,7 +91,7 @@ function App() {
 
 
         <Route path='/Employee' element={<Employee/>}></Route>
-
+        <Route path='/Emp/:id' element={<UpdateEmp/>}></Route>
     
       </Routes>
     </>
