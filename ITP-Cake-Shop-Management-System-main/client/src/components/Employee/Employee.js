@@ -42,7 +42,26 @@ function Employee() {
         alert(err.message);
       });
   };
+
+  function Button({ status }) {
+   
     
+    return (
+      <p
+        style={{
+          color: status === 0 ? "red" : "green",
+          backgroundColor: status === 0 ? "#FFBEBE " : "#8EFF94",
+          value: status === 0 ? "ada" : "sacsac",
+          width: "100px",
+          borderRadius: "16px",
+          height: "22px",
+          fontSize: "14px",
+          fontWeight: "600",
+          textAlign: "center",
+        }}
+      >
+       {status ===0 ? 'Deny' : 'Allow'}
+      </p>)}
   return (
     <div>
       <div className="content">
@@ -133,7 +152,10 @@ function Employee() {
                           </td>
 
                           <td style={{ borderStyle: "dotted" }}>
-                            {user.role}
+                            <Button
+                                  status={user.role}
+                                  style={{ width: "10px", float: "left" }}
+                                />
                           </td>
                           <td style={{ borderStyle: "dotted" }}>
                           <a
