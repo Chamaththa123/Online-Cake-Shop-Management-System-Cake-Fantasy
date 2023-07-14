@@ -6,6 +6,7 @@ import "../../css.css";
 import { FaStar } from "react-icons/fa";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
+import AdminReview from "../Review/AdminReview";
 
 const colors = {
   orange: "#FEB902",
@@ -181,7 +182,7 @@ function OitemDetails_A() {
                   title={`Customer Reviews (${inputs.numReviews})`}
                   style={{ margin: "20px" }}
                 >
-                  dfdf
+                  <AdminReview/>
                 </Tab>
               </Tabs>
             </div>

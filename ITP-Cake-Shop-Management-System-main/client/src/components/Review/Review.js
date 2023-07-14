@@ -7,6 +7,7 @@ import ProgressBar from "react-bootstrap/ProgressBar";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { FaStar } from "react-icons/fa";
+import "../../css.css";
 
 const colors = {
     orange: "#FEB902",
