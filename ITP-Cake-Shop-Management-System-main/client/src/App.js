@@ -37,6 +37,7 @@ import Wedding from "./components/Product/Wedding";
 import OitemReport from "./components/Product/OitemReport";
 import Employee from "./components/Employee/Employee";
 import UpdateEmp from "./components/Employee/UpdateEmp";
+import AddCustom from "./components/Order/CustomCake/AddCustom";
 
 
 function App() {
@@ -93,6 +94,8 @@ function App() {
         <Route path='/Employee' element={<Employee/>}></Route>
         <Route path='/Emp/:id' element={<UpdateEmp/>}></Route>
     
+        <Route path='/CustomCake' element={<AddCustom/>}></Route>
+
       </Routes>
     </>
   );
