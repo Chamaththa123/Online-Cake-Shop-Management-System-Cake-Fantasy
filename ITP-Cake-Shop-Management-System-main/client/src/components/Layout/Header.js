@@ -121,7 +121,7 @@ function Header() {
         <a href="/DeliveryArea" class="split">
           Delivery Areas
         </a>
-        <a href="#about" class="split">
+        <a href="/CustomCake" class="split">
           Custom Cake
         </a>
         <a href="/OurCollection" class="split">
