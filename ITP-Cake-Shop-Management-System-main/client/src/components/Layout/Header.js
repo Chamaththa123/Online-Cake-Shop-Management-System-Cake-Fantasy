@@ -122,7 +122,7 @@ function Header() {
           Delivery Areas
         </a>
         <a href="/CustomCake" class="split">
-          Custom Cake
+          Custom Order
         </a>
         <a href="/OurCollection" class="split">
           Our Collection
