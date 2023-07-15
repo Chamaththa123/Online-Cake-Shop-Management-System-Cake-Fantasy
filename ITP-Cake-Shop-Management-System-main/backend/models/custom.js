@@ -7,30 +7,30 @@ const customSchema = new mongoose.Schema({
   },
   email: {
     type: String,
-    // required: true,
+    required: true,
   },
   phone: {
     type: Number,
-    // required: true,
+    required: true,
   },
   image: {
     type: String,
   },
   quantity: {
     type: String,
-    // required: true,
+    required: true,
   },
   type: {
     type: String,
-    // required: true,
+    required: true,
   },
   date: {
     type: String,
-    // required: true,
+    required: true,
   },
   description: {
     type: String,
-    // required: true,
+    required: true,
   },
   status:{
     type: String,
