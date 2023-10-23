@@ -48,7 +48,7 @@ function FAQ() {
   return (
     <div style={{backgroundColor:'white'}}>
       <Header/>
-
+      <hr style={{ marginTop: "-10px" }}></hr>
       <div>
         <center><img src={faq} alt='FAQ' style={{width:'700px'}} /></center>
 

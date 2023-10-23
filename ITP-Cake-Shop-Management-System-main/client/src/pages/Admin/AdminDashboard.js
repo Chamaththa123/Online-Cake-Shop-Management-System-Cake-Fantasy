@@ -5,6 +5,7 @@ import { useAuth } from "../../context/auth";
 import Sidebar from "../../components/Layout/Sidebar";
 import Card from 'react-bootstrap/Card';
 import { Chart } from 'react-charts'
+import AdminHeader from "../../components/Layout/AdminHeader";
 const AdminDashboard = () => {
   const [auth] = useAuth();
 
@@ -147,133 +148,116 @@ const AdminDashboard = () => {
 
   return (
     <Layout>
-      <div className="content">
+      <div>
         <Sidebar />
         <div className="main">
-          <br></br>
-
+          <AdminHeader />
+          <br />
+          <br />
+          <br />
           <div className="main-card">
-          <Card style={{ width: '16rem' ,float:'left'}}>
-      <Card.Body>
-        <Card.Title>Products</Card.Title>
-        <p>
-            <i
-              class="fas fa-circle"
-              style={{ color: "#198AD8 ", fontSize: "15px" }}
-            ></i>
-            &nbsp;&nbsp;All Products - {oitemsCount}
-          </p>
-          <p>
-            <i
-              class="fas fa-circle"
-              style={{ color: "#51FF40 ", fontSize: "15px" }}
-            ></i>
-            &nbsp;&nbsp;In Stock Products - {oitemsIn_StockCount}
-          </p>
-          <p>
-            <i
-              class="fas fa-circle"
-              style={{ color: "#FF4040 ", fontSize: "15px" }}
-            ></i>
-            &nbsp;&nbsp;Out of Stock Products- {oitemsOut_Of_StockCount}
-          </p>
-        <Card.Link href="#">Card Link</Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
-      </Card.Body>
-    </Card>
+            <Card style={{ width: '20rem', float: 'left', marginLeft: '3.5rem', marginTop: '1rem' }}>
+              <Card.Body>
+                <Card.Title><i
+                  class="fas fa-circle"
+                  style={{ color: "#198AD8 ", fontSize: "15px" }}
+                ></i> <c style={{ color: "#09217B ", fontSize: "18px" }}> All Produts</c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {oitemsCount}</Card.Title>
 
-    <Card style={{ width: '16rem' ,float:'left',marginLeft:'1rem'}}>
-      <Card.Body>
-        <Card.Title>Orders</Card.Title>
-        <p>
-            <i
-              class="fas fa-circle"
-              style={{ color: "#198AD8 ", fontSize: "15px" }}
-            ></i>
-            &nbsp;&nbsp;All Orders - {order_Count}
-          </p>
-          <p>
-            <i
-              class="fas fa-circle"
-              style={{ color: "#51FF40 ", fontSize: "15px" }}
-            ></i>
-            &nbsp;&nbsp;Complete Orders - {CompleteCount}
-          </p>
-          <p>
-            <i
-              class="fas fa-circle"
-              style={{ color: "#FF4040 ", fontSize: "15px" }}
-            ></i>
-            &nbsp;&nbsp;Processing Orders - {ProcessingCount}
-          </p>
-        <Card.Link href="#">Card Link</Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
-      </Card.Body>
-    </Card>
+              </Card.Body>
+            </Card>
 
-    <Card style={{ width: '16rem' ,float:'left',marginLeft:'1rem'}}>
-      <Card.Body>
-        <Card.Title>Messages</Card.Title>
-        <p>
-            <i
-              class="fas fa-circle"
-              style={{ color: "#198AD8 ", fontSize: "15px" }}
-            ></i>
-            &nbsp;&nbsp;All Messages - {contact_Count}
-          </p>
-          <p>
-            <i
-              class="fas fa-circle"
-              style={{ color: "#51FF40 ", fontSize: "15px" }}
-            ></i>
-            &nbsp;&nbsp;Read Messages - {R_contact_Count}
-          </p>
-          <p>
-            <i
-              class="fas fa-circle"
-              style={{ color: "#FF4040 ", fontSize: "15px" }}
-            ></i>
-            &nbsp;&nbsp;UnRead Messages - {UR_contact_Count}
-          </p>
-        <Card.Link href="#">Card Link</Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
-      </Card.Body>
-    </Card>
+            <Card style={{ width: '20rem', float: 'left', marginLeft: '1rem', marginTop: '1rem' }}>
+              <Card.Body>
+                <Card.Title><i
+                  class="fas fa-circle"
+                  style={{ color: "#51FF40 ", fontSize: "15px" }}
+                ></i> <c style={{ color: "#097B21 ", fontSize: "18px" }}> In Stock Products</c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {oitemsIn_StockCount}</Card.Title>
 
-    <Card style={{ width: '16rem' ,float:'left',marginLeft:'1rem'}}>
-      <Card.Body>
-        <Card.Title>Messages</Card.Title>
-        <p>
-            <i
-              class="fas fa-circle"
-              style={{ color: "#198AD8 ", fontSize: "15px" }}
-            ></i>
-            &nbsp;&nbsp;All Messages - {contact_Count}
-          </p>
-          <p>
-            <i
-              class="fas fa-circle"
-              style={{ color: "#51FF40 ", fontSize: "15px" }}
-            ></i>
-            &nbsp;&nbsp;Read Messages - {R_contact_Count}
-          </p>
-          <p>
-            <i
-              class="fas fa-circle"
-              style={{ color: "#FF4040 ", fontSize: "15px" }}
-            ></i>
-            &nbsp;&nbsp;UnRead Messages - {ProcessingCount}
-          </p>
-        <Card.Link href="#">Card Link</Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
-      </Card.Body>
-    </Card>
- 
-            </div>
-            <br></br>
-            </div>
-            </div>
-      
+              </Card.Body>
+            </Card>
+
+            <Card style={{ width: '20rem', float: 'left', marginLeft: '1rem', marginTop: '1rem' }}>
+              <Card.Body>
+                <Card.Title><i
+                  class="fas fa-circle"
+                  style={{ color: "#FF4040 ", fontSize: "15px" }}
+                ></i> <c style={{ color: "#CB0B0B ", fontSize: "18px" }}> Out of Stock Products</c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{oitemsOut_Of_StockCount}</Card.Title>
+
+              </Card.Body>
+            </Card>
+
+            <Card style={{ width: '20rem', float: 'left', marginLeft: '3.5rem', marginTop: '1rem' }}>
+              <Card.Body>
+                <Card.Title><i
+                  class="fas fa-circle"
+                  style={{ color: "#198AD8 ", fontSize: "15px" }}
+                ></i> <c style={{ color: "#09217B ", fontSize: "18px" }}> All Orders</c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {order_Count}</Card.Title>
+
+              </Card.Body>
+            </Card>
+
+            <Card style={{ width: '20rem', float: 'left', marginLeft: '1rem', marginTop: '1rem' }}>
+              <Card.Body>
+                <Card.Title><i
+                  class="fas fa-circle"
+                  style={{ color: "#51FF40 ", fontSize: "15px" }}
+                ></i> <c style={{ color: "#097B21 ", fontSize: "18px" }}> Complete Orders</c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {CompleteCount}</Card.Title>
+
+              </Card.Body>
+            </Card>
+
+            <Card style={{ width: '20rem', float: 'left', marginLeft: '1rem', marginTop: '1rem' }}>
+              <Card.Body>
+                <Card.Title><i
+                  class="fas fa-circle"
+                  style={{ color: "#FF4040 ", fontSize: "15px" }}
+                ></i> <c style={{ color: "#CB0B0B ", fontSize: "18px" }}> Processing Orders</c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ProcessingCount}</Card.Title>
+
+              </Card.Body>
+            </Card>
+
+            <Card style={{ width: '20rem', float: 'left', marginLeft: '3.5rem', marginTop: '1rem' }}>
+              <Card.Body>
+                <Card.Title><i
+                  class="fas fa-circle"
+                  style={{ color: "#198AD8 ", fontSize: "15px" }}
+                ></i> <c style={{ color: "#09217B ", fontSize: "18px" }}> All Messages</c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {contact_Count}</Card.Title>
+
+              </Card.Body>
+            </Card>
+
+            <Card style={{ width: '20rem', float: 'left', marginLeft: '1rem', marginTop: '1rem' }}>
+              <Card.Body>
+                <Card.Title><i
+                  class="fas fa-circle"
+                  style={{ color: "#51FF40 ", fontSize: "15px" }}
+                ></i> <c style={{ color: "#097B21 ", fontSize: "18px" }}> Unread Messages</c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {UR_contact_Count}</Card.Title>
+
+              </Card.Body>
+            </Card>
+
+            <Card style={{ width: '20rem', float: 'left', marginLeft: '1rem', marginTop: '1rem' }}>
+              <Card.Body>
+                <Card.Title><i
+                  class="fas fa-circle"
+                  style={{ color: "#FF4040 ", fontSize: "15px" }}
+                ></i> <c style={{ color: "#CB0B0B ", fontSize: "18px" }}> Read Messages</c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{R_contact_Count}</Card.Title>
+
+              </Card.Body>
+            </Card>
+
+
+          </div>
+          <br></br>
+        </div>
+      </div>
+
     </Layout>
   );
 };
