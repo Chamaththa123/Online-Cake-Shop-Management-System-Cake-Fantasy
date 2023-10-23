@@ -58,7 +58,7 @@ function HomeRandom() {
                       {oitems.item_name}
                     </a>
                   </Card.Title>
-                  <Card.Text>Rs.{oitems.price.toFixed(2)}</Card.Text>
+                  <Card.Text>Rs.{oitems.price?.toFixed(2)}</Card.Text>
                 </Card.Body>
               </Card>
             </>
