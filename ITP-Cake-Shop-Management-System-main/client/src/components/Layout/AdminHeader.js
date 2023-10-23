@@ -8,7 +8,7 @@ function AdminHeader() {
     return (
         <Navbar className="bg-body-tertiary" style={{ boxShadow: 'none', position: 'fixed', width: '82%', marginLeft: '-0%' }}>
             <Container className="header-container">
-                <Navbar.Brand href="#home" style={{ fontSize: '20px', fontWeight: 'bold', color: '#b666d2' }}>Cake fantasy Cake Shop</Navbar.Brand>
+                <Navbar.Brand href="#home" style={{ fontSize: '20px', fontWeight: 'bold', color: '#b666d2' }}>Cake Fantasy Cake Shop</Navbar.Brand>
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
                     <img src={notification} alt='user' className='notification' />

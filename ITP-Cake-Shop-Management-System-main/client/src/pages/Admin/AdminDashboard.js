@@ -6,6 +6,8 @@ import Sidebar from "../../components/Layout/Sidebar";
 import Card from 'react-bootstrap/Card';
 import { Chart } from 'react-charts'
 import AdminHeader from "../../components/Layout/AdminHeader";
+import '../../components/Sidebar.css';
+import logo from '../../images/logo.png';
 const AdminDashboard = () => {
   const [auth] = useAuth();
 
@@ -149,7 +151,19 @@ const AdminDashboard = () => {
   return (
     <Layout>
       <div>
-        <Sidebar />
+      <div className="sidenav">
+        <div>
+         <center> <img src={logo} className='logo' alt='logo'/></center>
+        </div>
+        <a href="#" className="active">DashBoard</a>
+        <a href="/Product">Products</a>
+        <a href="#clients">Orders</a>
+        <a href="#clients">Custom Orders</a>
+        <a href="#contact">Inventory</a>
+        <a href="#contact">Messages</a>
+        <a href="#contact">Customers</a>
+        <a href="#contact">Employees</a>
+      </div>
         <div className="main">
           <AdminHeader />
           <br />

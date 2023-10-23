@@ -18,17 +18,28 @@
 .sidenav a {
   padding: 5% 5% 5% 15%;
   text-decoration: none;
-  font-size: 15px;
-  color: #585858;
+  font-size: 17px;
+  color: #242424;
   display: block;
+  font-weight: 600;
 }
 
 .sidenav a:hover {
-  color: #2403b9;
+  color: #ffffff;
+  background-color: #b666d2;
+  margin:10px;
+  border-radius: 10px;
+}
+
+.active {
+  color: #ffffff;
+  background-color: #b666d2;
+  margin:10px;
+  border-radius: 10px;
 }
 
 .logo {
-  width: 50%;
+  width: 60%;
 }
 
 @media screen and (max-height: 450px) {

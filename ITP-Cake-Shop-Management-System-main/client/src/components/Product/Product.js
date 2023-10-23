@@ -309,7 +309,7 @@ function Product() {
                                 />
                               </td>
                               <td style={{ borderStyle: "dotted" }}>
-                                Rs.{oitems.price.toFixed(2)}
+                                Rs.{oitems.price?.toFixed(2)}
                               </td>
                               <td>
                                 <a
