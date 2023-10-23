@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import Sidebar from "../../components/Layout/Sidebar";
 import AddProduct from "./AddProduct";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
@@ -9,6 +8,9 @@ import { Table } from "react-bootstrap";
 import { MDBInput } from "mdb-react-ui-kit";
 import Rating from "@mui/material/Rating";
 import OitemReport from "./OitemReport";
+import '../../components/Sidebar.css';
+import logo from '../../images/logo.png';
+import AdminHeader from "../Layout/AdminHeader";
 
 function Product() {
   const [oitems, setoitems] = useState([]);
@@ -110,11 +112,26 @@ function Product() {
   return (
     <div>
       <div className="content">
-        <Sidebar />
+        <div className="sidenav">
+          <div>
+            <center> <img src={logo} className='logo' alt='logo' /></center>
+          </div>
+          <a href="#">DashBoard</a>
+          <a href="/Product" className="active">Products</a>
+          <a href="#clients">Orders</a>
+          <a href="#clients">Custom Orders</a>
+          <a href="#contact">Inventory</a>
+          <a href="#contact">Messages</a>
+          <a href="#contact">Customers</a>
+          <a href="#contact">Employees</a>
+        </div>
         <div className="main">
-          <br></br>
-
-          <div className="main-card">
+          <AdminHeader />
+          <div>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
             <p
               className="p-main-card"
               style={{ fontSize: "30px", fontWeight: "500" }}
@@ -331,7 +348,7 @@ function Product() {
                   <AddProduct />
                 </Tab>
                 <Tab eventKey="profile1" title="Product Report">
-                  <OitemReport/>
+                  <OitemReport />
                 </Tab>
               </Tabs>
             </div>
