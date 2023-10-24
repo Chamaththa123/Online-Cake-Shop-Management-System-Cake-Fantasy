@@ -16,7 +16,7 @@ function Sidebar() {
           <a href="/order/admin/allorders">Orders</a>
           <a href="#clients">Custom Orders</a>
           <a href="#contact">Inventory</a>
-          <a href="#contact">Messages</a>
+          <a href="/AllContact">Messages</a>
           <a href="#contact">Customers</a>
           <a href="#contact">Employees</a>
           <a href="#contact">Employees</a>
