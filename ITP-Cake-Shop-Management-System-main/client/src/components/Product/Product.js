@@ -116,8 +116,8 @@ function Product() {
           <div>
             <center> <img src={logo} className='logo' alt='logo' /></center>
           </div>
-          <a href="#">DashBoard</a>
-          <a href="/Product" className="active">Products</a>
+          <a href="/dashboard/admin">DashBoard</a>
+          <a href="/Product" className="active1">Products</a>
           <a href="#clients">Orders</a>
           <a href="#clients">Custom Orders</a>
           <a href="#contact">Inventory</a>

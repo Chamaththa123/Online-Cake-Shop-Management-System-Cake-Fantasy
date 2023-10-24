@@ -155,7 +155,7 @@ const AdminDashboard = () => {
         <div>
          <center> <img src={logo} className='logo' alt='logo'/></center>
         </div>
-        <a href="#" className="active">DashBoard</a>
+        <a href="#" className="active1">DashBoard</a>
         <a href="/Product">Products</a>
         <a href="#clients">Orders</a>
         <a href="#clients">Custom Orders</a>
