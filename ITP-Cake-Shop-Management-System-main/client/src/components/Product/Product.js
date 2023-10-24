@@ -10,6 +10,7 @@ import Rating from "@mui/material/Rating";
 import OitemReport from "./OitemReport";
 import '../../components/Sidebar.css';
 import logo from '../../images/logo.png';
+import product from '../../images/cake.png';
 import AdminHeader from "../Layout/AdminHeader";
 
 function Product() {
@@ -136,81 +137,12 @@ function Product() {
               className="p-main-card"
               style={{ fontSize: "30px", fontWeight: "500" }}
             >
-              All Products
+              <img src={product}  alt='logo' style={{width:'40px',marginTop:'-12px'}}/>&nbsp;&nbsp;All Products
             </p>
-            <hr></hr>
+           
             <div>
-              <p className="p-main-card">
-                <button
-                  className="btn-main-card"
-                  style={{ backgroundColor: "#B666D2" }}
-                >
-                  <i
-                    class="fa fa-birthday-cake"
-                    style={{
-                      fontSize: "20px",
-                      marginLeft: "0px",
-                      color: "white",
-                    }}
-                  ></i>
-                </button>
-              </p>
-              <p style={{ fontSize: "15px", float: "left" }}>
-                &nbsp;&nbsp;&nbsp; All Cake Products
-                <br />
-                <b>
-                  <i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{oitems_Count}</i>
-                </b>
-              </p>
-
-              <p className="p-main-card">
-                <button
-                  className="btn-main-card"
-                  style={{ marginLeft: "22%", backgroundColor: "#5BFB59 " }}
-                >
-                  <i
-                    class="fa fa-birthday-cake"
-                    style={{
-                      fontSize: "20px",
-                      marginLeft: "0px",
-                      color: "white",
-                    }}
-                  ></i>
-                </button>
-              </p>
-              <p style={{ fontSize: "15px", float: "left" }}>
-                &nbsp;&nbsp;&nbsp;In Stock Products
-                <br />
-                <b>
-                  <i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{oitemsIn_StockCount}</i>
-                </b>
-              </p>
-
-              <p className="p-main-card">
-                <button
-                  className="btn-main-card"
-                  style={{ marginLeft: "22%", backgroundColor: "#FF5D5D " }}
-                >
-                  <i
-                    class="fa fa-birthday-cake"
-                    style={{
-                      fontSize: "20px",
-                      marginLeft: "0px",
-                      color: "white",
-                    }}
-                  ></i>
-                </button>
-              </p>
-              <p style={{ fontSize: "15px", float: "left" }}>
-                &nbsp;&nbsp;&nbsp;Out of Stock Products
-                <br />
-                <b>
-                  <i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{oitemsOut_StockCount}</i>
-                </b>
-              </p>
-              <br></br>
-              <br></br>
-              <hr></hr>
+              
+              
 
               <Tabs
                 defaultActiveKey="home"

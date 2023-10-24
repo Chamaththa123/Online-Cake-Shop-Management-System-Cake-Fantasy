@@ -8,6 +8,15 @@ import { Chart } from 'react-charts'
 import AdminHeader from "../../components/Layout/AdminHeader";
 import '../../components/Sidebar.css';
 import logo from '../../images/logo.png';
+import product from '../../images/cake.png';
+import In_Stock from '../../images/in-stock.png';
+import Out_Of_Stock from '../../images/out-of-stock.png';
+import allorder from '../../images/shopping.png';
+import complteorder from '../../images/check-out.png';
+import processingorder from '../../images/processing.png';
+import allmsg from '../../images/talk.png';
+import unread from '../../images/msg.png';
+import read from '../../images/email.png';
 const AdminDashboard = () => {
   const [auth] = useAuth();
 
@@ -151,19 +160,19 @@ const AdminDashboard = () => {
   return (
     <Layout>
       <div>
-      <div className="sidenav">
-        <div>
-         <center> <img src={logo} className='logo' alt='logo'/></center>
+        <div className="sidenav">
+          <div>
+            <center> <img src={logo} className='logo' alt='logo' /></center>
+          </div>
+          <a href="#" className="active1">DashBoard</a>
+          <a href="/Product">Products</a>
+          <a href="#clients">Orders</a>
+          <a href="#clients">Custom Orders</a>
+          <a href="#contact">Inventory</a>
+          <a href="#contact">Messages</a>
+          <a href="#contact">Customers</a>
+          <a href="#contact">Employees</a>
         </div>
-        <a href="#" className="active1">DashBoard</a>
-        <a href="/Product">Products</a>
-        <a href="#clients">Orders</a>
-        <a href="#clients">Custom Orders</a>
-        <a href="#contact">Inventory</a>
-        <a href="#contact">Messages</a>
-        <a href="#contact">Customers</a>
-        <a href="#contact">Employees</a>
-      </div>
         <div className="main">
           <AdminHeader />
           <br />
@@ -172,21 +181,15 @@ const AdminDashboard = () => {
           <div className="main-card">
             <Card style={{ width: '20rem', float: 'left', marginLeft: '3.5rem', marginTop: '1rem' }}>
               <Card.Body>
-                <Card.Title><i
-                  class="fas fa-circle"
-                  style={{ color: "#198AD8 ", fontSize: "15px" }}
-                ></i> <c style={{ color: "#09217B ", fontSize: "18px" }}> All Produts</c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {oitemsCount}</Card.Title>
+                <Card.Title><img src={product} alt='logo' style={{ width: '40px' }} /> &nbsp;&nbsp;<c style={{ color: "#09217B ", fontSize: "18px" }}> All Produts</c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp; {oitemsCount}</Card.Title>
 
               </Card.Body>
             </Card>
 
             <Card style={{ width: '20rem', float: 'left', marginLeft: '1rem', marginTop: '1rem' }}>
               <Card.Body>
-                <Card.Title><i
-                  class="fas fa-circle"
-                  style={{ color: "#51FF40 ", fontSize: "15px" }}
-                ></i> <c style={{ color: "#097B21 ", fontSize: "18px" }}> In Stock Products</c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <Card.Title><img src={In_Stock} alt='logo' style={{ width: '40px' }} /> &nbsp;&nbsp;<c style={{ color: "#097B21 ", fontSize: "18px" }}> In Stock </c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {oitemsIn_StockCount}</Card.Title>
 
               </Card.Body>
@@ -194,20 +197,14 @@ const AdminDashboard = () => {
 
             <Card style={{ width: '20rem', float: 'left', marginLeft: '1rem', marginTop: '1rem' }}>
               <Card.Body>
-                <Card.Title><i
-                  class="fas fa-circle"
-                  style={{ color: "#FF4040 ", fontSize: "15px" }}
-                ></i> <c style={{ color: "#CB0B0B ", fontSize: "18px" }}> Out of Stock Products</c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{oitemsOut_Of_StockCount}</Card.Title>
+                <Card.Title><img src={Out_Of_Stock} alt='logo' style={{ width: '40px' }} /> &nbsp;&nbsp;<c style={{ color: "#CB0B0B ", fontSize: "18px" }}> Out of Stock </c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{oitemsOut_Of_StockCount}</Card.Title>
 
               </Card.Body>
             </Card>
 
             <Card style={{ width: '20rem', float: 'left', marginLeft: '3.5rem', marginTop: '1rem' }}>
               <Card.Body>
-                <Card.Title><i
-                  class="fas fa-circle"
-                  style={{ color: "#198AD8 ", fontSize: "15px" }}
-                ></i> <c style={{ color: "#09217B ", fontSize: "18px" }}> All Orders</c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <Card.Title><img src={allorder} alt='logo' style={{ width: '40px' }} /> &nbsp;&nbsp;<c style={{ color: "#09217B ", fontSize: "18px" }}> All Orders</c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {order_Count}</Card.Title>
 
               </Card.Body>
@@ -215,10 +212,7 @@ const AdminDashboard = () => {
 
             <Card style={{ width: '20rem', float: 'left', marginLeft: '1rem', marginTop: '1rem' }}>
               <Card.Body>
-                <Card.Title><i
-                  class="fas fa-circle"
-                  style={{ color: "#51FF40 ", fontSize: "15px" }}
-                ></i> <c style={{ color: "#097B21 ", fontSize: "18px" }}> Complete Orders</c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <Card.Title><img src={complteorder} alt='logo' style={{ width: '40px' }} /> &nbsp;&nbsp;<c style={{ color: "#097B21 ", fontSize: "18px" }}> Complete </c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {CompleteCount}</Card.Title>
 
               </Card.Body>
@@ -226,20 +220,14 @@ const AdminDashboard = () => {
 
             <Card style={{ width: '20rem', float: 'left', marginLeft: '1rem', marginTop: '1rem' }}>
               <Card.Body>
-                <Card.Title><i
-                  class="fas fa-circle"
-                  style={{ color: "#FF4040 ", fontSize: "15px" }}
-                ></i> <c style={{ color: "#CB0B0B ", fontSize: "18px" }}> Processing Orders</c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ProcessingCount}</Card.Title>
+                <Card.Title><img src={processingorder} alt='logo' style={{ width: '40px' }} /> &nbsp;&nbsp;<c style={{ color: "#CB0B0B ", fontSize: "18px" }}> Processing </c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ProcessingCount}</Card.Title>
 
               </Card.Body>
             </Card>
 
             <Card style={{ width: '20rem', float: 'left', marginLeft: '3.5rem', marginTop: '1rem' }}>
               <Card.Body>
-                <Card.Title><i
-                  class="fas fa-circle"
-                  style={{ color: "#198AD8 ", fontSize: "15px" }}
-                ></i> <c style={{ color: "#09217B ", fontSize: "18px" }}> All Messages</c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <Card.Title><img src={allmsg} alt='logo' style={{ width: '40px' }} /> &nbsp;&nbsp; <c style={{ color: "#09217B ", fontSize: "18px" }}> All Messages</c>&nbsp;&nbsp;&nbsp;&nbsp;
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {contact_Count}</Card.Title>
 
               </Card.Body>
@@ -247,10 +235,7 @@ const AdminDashboard = () => {
 
             <Card style={{ width: '20rem', float: 'left', marginLeft: '1rem', marginTop: '1rem' }}>
               <Card.Body>
-                <Card.Title><i
-                  class="fas fa-circle"
-                  style={{ color: "#51FF40 ", fontSize: "15px" }}
-                ></i> <c style={{ color: "#097B21 ", fontSize: "18px" }}> Unread Messages</c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <Card.Title><img src={unread} alt='logo' style={{ width: '40px' }} /> &nbsp;&nbsp;<c style={{ color: "#097B21 ", fontSize: "18px" }}> Unread </c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {UR_contact_Count}</Card.Title>
 
               </Card.Body>
@@ -258,10 +243,7 @@ const AdminDashboard = () => {
 
             <Card style={{ width: '20rem', float: 'left', marginLeft: '1rem', marginTop: '1rem' }}>
               <Card.Body>
-                <Card.Title><i
-                  class="fas fa-circle"
-                  style={{ color: "#FF4040 ", fontSize: "15px" }}
-                ></i> <c style={{ color: "#CB0B0B ", fontSize: "18px" }}> Read Messages</c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{R_contact_Count}</Card.Title>
+                <Card.Title><img src={read} alt='logo' style={{ width: '40px' }} /> &nbsp;&nbsp;<c style={{ color: "#CB0B0B ", fontSize: "18px" }}> Read</c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{R_contact_Count}</Card.Title>
 
               </Card.Body>
             </Card>
