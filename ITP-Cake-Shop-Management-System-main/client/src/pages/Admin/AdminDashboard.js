@@ -160,18 +160,8 @@ const AdminDashboard = () => {
   return (
     <Layout>
       <div>
-        <div className="sidenav">
-          <div>
-            <center> <img src={logo} className='logo' alt='logo' /></center>
-          </div>
-          <a href="#" className="active1">DashBoard</a>
-          <a href="/Product">Products</a>
-          <a href="#clients">Orders</a>
-          <a href="#clients">Custom Orders</a>
-          <a href="#contact">Inventory</a>
-          <a href="#contact">Messages</a>
-          <a href="#contact">Customers</a>
-          <a href="#contact">Employees</a>
+        <div>
+          <Sidebar/>
         </div>
         <div className="main">
           <AdminHeader />
