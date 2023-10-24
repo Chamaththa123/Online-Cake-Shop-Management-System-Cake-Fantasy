@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import Card from 'react-bootstrap/Card';
 import AddProduct from "./AddProduct";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
@@ -12,6 +13,8 @@ import '../../components/Sidebar.css';
 import logo from '../../images/logo.png';
 import product from '../../images/cake.png';
 import AdminHeader from "../Layout/AdminHeader";
+import In_Stock from '../../images/in-stock.png';
+import Out_Of_Stock from '../../images/out-of-stock.png';
 
 function Product() {
   const [oitems, setoitems] = useState([]);
@@ -142,8 +145,33 @@ function Product() {
            
             <div>
               
-              
+            <Card style={{ width: '20rem', float: 'left', marginLeft: '3.5rem', marginTop: '1rem' }}>
+              <Card.Body>
+                <Card.Title><img src={product} alt='logo' style={{ width: '40px' }} /> &nbsp;&nbsp;<c style={{ color: "#09217B ", fontSize: "18px" }}> All Produts</c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp; {oitems_Count}</Card.Title>
 
+              </Card.Body>
+            </Card>
+
+            <Card style={{ width: '20rem', float: 'left', marginLeft: '1rem', marginTop: '1rem' }}>
+              <Card.Body>
+                <Card.Title><img src={In_Stock} alt='logo' style={{ width: '40px' }} /> &nbsp;&nbsp;<c style={{ color: "#097B21 ", fontSize: "18px" }}> In Stock </c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {oitemsIn_StockCount}</Card.Title>
+
+              </Card.Body>
+            </Card>
+
+            <Card style={{ width: '20rem', float: 'left', marginLeft: '1rem', marginTop: '1rem' }}>
+              <Card.Body>
+                <Card.Title><img src={Out_Of_Stock} alt='logo' style={{ width: '40px' }} /> &nbsp;&nbsp;<c style={{ color: "#CB0B0B ", fontSize: "18px" }}> Out of Stock </c>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{oitemsOut_StockCount}</Card.Title>
+
+              </Card.Body>
+            </Card>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
               <Tabs
                 defaultActiveKey="home"
                 transition={false}
