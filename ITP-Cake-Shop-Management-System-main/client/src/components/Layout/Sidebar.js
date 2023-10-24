@@ -13,7 +13,7 @@ function Sidebar() {
         </div>
         <a href="#"><img src={dashboard} className='icon' alt='cd'/> DashBoard</a>
           <a href="/Product"><img src={product} className='icon' alt='cd'/> Products</a>
-          <a href="#clients">Orders</a>
+          <a href="/order/admin/allorders">Orders</a>
           <a href="#clients">Custom Orders</a>
           <a href="#contact">Inventory</a>
           <a href="#contact">Messages</a>
