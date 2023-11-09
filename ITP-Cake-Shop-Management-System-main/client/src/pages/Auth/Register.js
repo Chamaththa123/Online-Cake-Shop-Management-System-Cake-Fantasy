@@ -115,7 +115,7 @@ const Register = () => {
             />
           </div>
           <div className="mb-3">
-          <h6 style={{textAlign:'left'}}><i>What is Your Favorite Cake ?</i></h6>
+          <h6 style={{textAlign:'left'}}><i>What is Your Favourite Cake ?</i></h6>
             <input
               type="text"
               value={answer}
