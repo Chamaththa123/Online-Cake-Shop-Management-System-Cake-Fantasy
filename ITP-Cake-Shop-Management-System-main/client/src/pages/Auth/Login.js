@@ -25,11 +25,11 @@ const Login = () => {
       if (res && res.data.success) {
         window.alert(res.data && res.data.message);
         setAuth({
-            ...auth,
-            user: res.data.user,
-            token: res.data.token,
-          });
-          localStorage.setItem("auth", JSON.stringify(res.data));
+          ...auth,
+          user: res.data.user,
+          token: res.data.token,
+        });
+        localStorage.setItem("auth", JSON.stringify(res.data));
         navigate("/");
       } else {
         window.alert(res.data.message)
@@ -40,65 +40,67 @@ const Login = () => {
     }
   };
   return (
-    
-      <Layout>
-        <Header/>
-         
-        <center>
-          
-        <div style={{backgroundColor:'white'}}>
-        <hr style={{ marginTop: "-10px" }}></hr>
-          <br></br>
-        <div className="form-container " style={{width:'30%',textAlign:'left'}}>
-          <br></br>
-          <Card style={{padding:'30px'}}>
-          <form onSubmit={handleSubmit}>
-         <center> <i><h4 className="title">Signin to Cake Fantasy</h4></i></center>
-         <br/>
 
-          <div className="mb-3">
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="form-control"
-              id="exampleInputEmail1"
-              placeholder="Enter Your Email "
-              required
-            />
-          </div>
-          <div className="mb-3">
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="form-control"
-              id="exampleInputPassword1"
-              placeholder="Enter Your Password"
-              required
-            />
-          </div>
-          <div className="mb-3">
-            
-            <a onClick={() => {
-                navigate("/ForgotPassword");
-              }} href="" style={{textDecoration:'none'}}>Forgot Password ?</a>
-          </div>
-          <button type="submit" className="btn btn-primary" style={{width:'100%',textAlign:'center',backgroundColor:'#b666d2',borderColor:"#b666d2"}}>
-            SignIn
-          </button>
-        </form>
-    </Card>
+    <Layout>
+      <Header />
 
-        <br></br>
-        <br></br>
-        
-      </div>
+      <center>
+
+        <div style={{ backgroundColor: 'white' }}>
+          <hr style={{ marginTop: "-10px" }}></hr>
+          <br></br>
+          <div className="form-container " style={{ width: '30%', textAlign: 'left' }}>
+            <br></br>
+            <Card style={{ padding: '30px' }}>
+              <form onSubmit={handleSubmit}>
+                <center> <i><h4 className="title">SignIn to Cake Fantasy</h4></i></center>
+                <br />
+
+                <div className="mb-3">
+                  <h6><i>User Email :</i></h6>
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="form-control"
+                    id="exampleInputEmail1"
+                    placeholder=""
+                    required
+                  />
+                </div>
+                <div className="mb-3">
+                  <h6><i>User Password :</i></h6>
+                  <i><input
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    className="form-control"
+                    id="exampleInputPassword1"
+                    placeholder="*****"
+                    required
+                  /></i>
+                </div>
+                <div className="mb-3">
+
+                  <i><a onClick={() => {
+                    navigate("/ForgotPassword");
+                  }} href="" style={{ textDecoration: 'none', color: 'black' }}>Forgot Password ?</a></i>
+                </div>
+                <button type="submit" className="btn btn-primary" style={{ width: '100%', textAlign: 'center', backgroundColor: '#b666d2', borderColor: "#b666d2" }}>
+                  <i>SignIn</i>
+                </button>
+              </form>
+            </Card>
+
+            <br></br>
+            <br></br>
+
+          </div>
         </div>
-        </center>
-      <Footer/>
-      </Layout>
-  
+      </center>
+      <Footer />
+    </Layout>
+
   );
 };
 
