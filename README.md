@@ -67,7 +67,7 @@
 
 # UI
 
-<img src='https://firebasestorage.googleapis.com/v0/b/test-reactnative-9bda1.appspot.com/o/1.PNG?alt=media&token=b324a49c-14ea-4dd1-808e-9ddba00eb9d8'>
+<img src='https://firebasestorage.googleapis.com/v0/b/test-reactnative-9bda1.appspot.com/o/home.png?alt=media&token=b30d1411-764a-4145-8df8-91144e907ab7'>
 <img src='https://firebasestorage.googleapis.com/v0/b/test-reactnative-9bda1.appspot.com/o/2.PNG?alt=media&token=1974de5d-9e49-4672-bdf9-38e24d69f3db'>
 <img src='https://firebasestorage.googleapis.com/v0/b/test-reactnative-9bda1.appspot.com/o/3.PNG?alt=media&token=00b54dd9-aacc-40c1-8447-532256abdc80'>
 <img src='https://firebasestorage.googleapis.com/v0/b/test-reactnative-9bda1.appspot.com/o/11.PNG?alt=media&token=21c29d63-269c-4019-8a80-89dcccb293ef'>
