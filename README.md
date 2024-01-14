@@ -1,23 +1,65 @@
-# Online-Cake-Shop-Management-System
+# Online Cake Shop Management System
 
-The Online Cake Shop Management System is a web application developed using the MERN (MongoDB, Express.js, React.js, and Node.js) stack. It is designed to facilitate the management and operation of an online cake shop. This system allows customers to browse and purchase cakes online while providing the shop owner with the necessary tools to manage orders, Items, and customer information.
+# Introduction
 
-Here's a breakdown of the different components and features of the Online Cake Shop Management System:
+<p>The Online Cake Shop Management System is a comprehensive web application developed using the MERN (MongoDB, Express.js, React.js, and Node.js) stack. This system is designed to streamline the management and operation of an online cake shop, providing a user-friendly interface for both customers and administrators.</p>
 
-1.User Authentication:
-Users can register and create an account. Authentication and authorization mechanisms are implemented to ensure secure access to the system. Passwords are hashed and stored securely.
+# Features
 
-2. Cake Catalog:
-The system provides an extensive catalog of cakes with details such as name, description, price, and available quantity. Users can browse through the catalog, search for specific cakes, and view cake details. The catalog can be managed by the admin, allowing them to add, edit, or remove cakes.
+<ol>
+<li>User Management: Users can register and log in to the app. Once logged in, they can view and manage their previously uploaded code files in their profile.</li>
+<li>Code Complexity Analysis: Analyze the complexity of your Java code, helping you maintain clean and efficient software.</li>
+<li>Software Composition Analysis Metrics: Calculate metrics related to your code's structure, including class counts, and more.</li>
+<li>Syntax Error Detection: Identify and highlight syntax errors within the uploaded Java code, making it easier to catch and correct mistakes.</li>
+<li>Code Duplication Detection: Find and display duplicated code sections, offering recommendations to refactor and reduce redundancy.</li>
+<li>Code Revision: Save and access previously uploaded code files in your user profile for future reference and analysis.</li>
+<li>Download Previous Uploads : Users can easily download previously uploaded code files from their profile for offline reference or further analysis.</li>
+<li>User Reviews: Allow users to provide feedback and reviews about the tool, helping to improve and enhance its features.</li>
+</ol>
 
-3.Order Management:
-Customers can place orders by providing delivery details and providing payment methods. The system generates order confirmations with unique order IDs. Admins can view and manage incoming orders, update their status, and mark them as completed.
+# Technologies Used
+<p>This web app is built using the MERN (MongoDB, Express, React, Node.js) stack, along with various other technologies and libraries:</p>
+<br>
+<p>Frontend:</p>
+<li>React: Building the user interface and components.</li>
+<li>Axios: Handling HTTP requests to the backend.</li>
+<br>
+<p>Backend:</p>
+<li>Node.js: Serving as the server-side runtime environment.</li>
+<li>Express.js: Handling routing and API endpoints.</li>
+<li>MongoDB: Storing user profiles, uploaded code, and reviews.</li>
+<br>
+<p>Other:</p>
+<li>Java Parser Libraries: Utilized to analyze and parse Java code.</li>
+<li>Code Analysis Libraries: Used to calculate code complexity and detect syntax errors.</li><br>
+<p>Database:</p>
+<li>MongoDB: Storing user data, uploaded code files, and reviews.</li>
+<br>
+<p>Authentication:</p>
+<li>JSON Web Tokens (JWT): Securing user authentication and authorization.</li>
+<br>
+<p>Styling:</p>
+<li>CSS and React Boostrap.</li><br>
 
-4.Customer Management:
-Admins can view and manage customer information, including personal details and contact information. Customer profiles can be created , deleted by the admin.
 
-5.review management:
-Customers can add reviews for specific cake items providing rating, name and comment. After the review is added, the average rating for a product, review count, and review statistics are automatically calculated and displayed to the users.
+# Getting Started
+1. Clone this repository. : `gh repo clone Chamaththa123/Static-Code-Analyzer`<br>
+2. Install the necessary dependencies using `npm install` in both the client and backend directories.<br>
+3. Set up your MongoDB database and configure the connection in the `backend/config/db.js` file.<br>
+4. Start the backend using `npm start` in the `backend` directory.<br>
+5. Start the React app using `npm start` in the `client` directory.<br>
 
-6.Reports and Analytics:
-The system provides reports to track Order Details, Cake product, Customer Details.
+# UI
+
+<img src='https://firebasestorage.googleapis.com/v0/b/test-reactnative-9bda1.appspot.com/o/1.PNG?alt=media&token=b324a49c-14ea-4dd1-808e-9ddba00eb9d8'>
+<img src='https://firebasestorage.googleapis.com/v0/b/test-reactnative-9bda1.appspot.com/o/2.PNG?alt=media&token=1974de5d-9e49-4672-bdf9-38e24d69f3db'>
+<img src='https://firebasestorage.googleapis.com/v0/b/test-reactnative-9bda1.appspot.com/o/3.PNG?alt=media&token=00b54dd9-aacc-40c1-8447-532256abdc80'>
+<img src='https://firebasestorage.googleapis.com/v0/b/test-reactnative-9bda1.appspot.com/o/11.PNG?alt=media&token=21c29d63-269c-4019-8a80-89dcccb293ef'>
+<img src='https://firebasestorage.googleapis.com/v0/b/test-reactnative-9bda1.appspot.com/o/4.PNG?alt=media&token=1cf2e425-133d-463d-a573-5b703f75b468'>
+<img src='https://firebasestorage.googleapis.com/v0/b/test-reactnative-9bda1.appspot.com/o/5.PNG?alt=media&token=59dd3ec2-8d72-4c4c-97e9-d6ba59fcb1d3'>
+<img src='https://firebasestorage.googleapis.com/v0/b/test-reactnative-9bda1.appspot.com/o/6.PNG?alt=media&token=7d31510b-0dc7-41bf-8ef9-40f867cdf302'>
+<img src='https://firebasestorage.googleapis.com/v0/b/test-reactnative-9bda1.appspot.com/o/7.PNG?alt=media&token=def5153d-affc-41da-b565-90cba0b2c93a'>
+<img src='https://firebasestorage.googleapis.com/v0/b/test-reactnative-9bda1.appspot.com/o/8.PNG?alt=media&token=3711b97a-c0ee-424c-bcee-80f8fe83d5ba'>
+<img src='https://console.firebase.google.com/u/0/project/test-reactnative-9bda1/storage/test-reactnative-9bda1.appspot.com/files'>
+<img src='https://firebasestorage.googleapis.com/v0/b/test-reactnative-9bda1.appspot.com/o/9.PNG?alt=media&token=efbe4762-a25b-496a-9011-734392f90822'>
+<img src='https://firebasestorage.googleapis.com/v0/b/test-reactnative-9bda1.appspot.com/o/10.PNG?alt=media&token=ae1a49d2-1606-47b9-9ab1-1aecb97db7ee'>
